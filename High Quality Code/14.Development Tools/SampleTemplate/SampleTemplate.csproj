@@ -46,7 +46,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
