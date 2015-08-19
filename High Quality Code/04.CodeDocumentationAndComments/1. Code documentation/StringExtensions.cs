@@ -107,7 +107,7 @@
             return input.Substring(0, 1).ToUpper(CultureInfo.CurrentCulture) + input.Substring(1, input.Length - 1);
         }
         /// <summary>
-        /// Getting the substring between two input substrings that are part of a larger string
+        /// Getts the substring between two input substrings that are part of a larger string
         /// </summary>
         /// <param name="input">large input string</param>
         /// <param name="startString">start input substring</param>
@@ -223,7 +223,7 @@
         }
 
         /// <summary>
-        /// Getting the file extension of a file 
+        /// Getts the file extension of a file 
         /// </summary>
         /// <param name="fileName">input string of the filename</param>
         /// <returns>the extension as a string</returns>
@@ -243,7 +243,7 @@
             return fileParts.Last().Trim().ToLower();
         }
         /// <summary>
-        /// getting the content of the file according to its extension
+        /// Gets the content of the file according to its extension
         /// </summary>
         /// <param name="fileExtension">input string of the file extension</param>
         /// <returns>string with the content of the file</returns>
