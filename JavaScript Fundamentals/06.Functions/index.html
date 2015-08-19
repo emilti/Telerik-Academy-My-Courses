@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<div id="reminder">Open with Google Chrome and Press F12 to check the scripts.</div>
+<form>
+    <label>Problem 1</label>
+    <div>
+        Problem 1. English digit
+
+        Write a function that returns the last digit of given integer as an English word.
+
+        Examples:
+        input 	output
+        512 	two
+        1024 	four
+        12309 	nine
+    </div>
+    <input type="text" name="numberProblem1" placeholder="Enter number..." id="input1"/>
+    <input type="submit" value="Result Problem 1" onclick="problem1(this.form)"><br/>
+    <label>Problem 2</label>
+    <div>
+        Problem 2. Reverse number
+
+        Write a function that reverses the digits of given decimal number.
+
+        Example:
+        input 	output
+        256 	652
+        123.45 	54.321
+    </div>
+    <input type="text" name="numberProblem2" placeholder="Enter number..." id="input2"/>
+    <input type="submit" value="Result Problem 2" onclick="problem2(this.form)"><br/>
+    <label>Problem 3</label>
+    <div>
+        Problem 3. Occurrences of word
+
+        Write a function that finds all the occurrences of word in a text.
+        The search can be case sensitive or case insensitive.
+        Use function overloading.
+    </div>
+    <input type="text" name="textProblem3" placeholder="Enter text..." id="input3-text"/>
+    <input type="text" name="wordProblem3" placeholder="Enter word..." id="input3-word"/>
+    <label><input type="checkbox" name="checkProblem3" id="input3-check"/>Case Sensetive</label>
+    <input type="submit" value="Result Problem 3" onclick="problem3(this.form)"><br/>
+    <label>Problem 4</label>
+    <div>
+        Problem 4. Number of elements
+        Write a function to count the number of div elements on the web page
+    </div>
+    <input type="submit" value="Result Problem 4" onclick="problem4(this.form)"><br/>
+    <div id="count"></div>
+    <label>Problem 5</label>
+    <div>
+        Problem 5. Appearance count
+        Write a function that counts how many times given number appears in given array.
+        Write a test function to check if the function is working correctly.
+    </div>
+    <input type="text" name="arrayProblem5" placeholder="Enter numbers separated by coma..." id="input5-array"/>
+    <input type="text" name="numberProblem5" placeholder="Enter number..." id="input5-number"/>
+    <input type="submit" value="Result Problem 5" onclick="problem5(this.form)">
+    <input type="submit" value="Test Problem 5" onclick="problem5Test()"><br/>
+    <label>Problem 6</label>
+    <div>
+        Problem 6. Larger than neighbours
+        Write a function that checks if the element at given position in given array of integers is bigger than its two neighbours (when such exist).
+    </div>
+    <input type="text" name="arrayProblem6" placeholder="Enter numbers separated by coma..." id="input6-array"/>
+    <input type="text" name="positionProblem6" placeholder="Enter position..." id="input6-position"/>
+    <input type="submit" value="Result Problem 6" onclick="problem6(form)"><br/>
+    <label>Problem 7</label>
+    <div>
+        Problem 7. First larger than neighbours
+        Write a function that returns the index of the first element in array that is larger than its neighbours or -1, if there’s no such element.
+        Use the function from the previous exercise.
+    </div>
+    <input type="text" name="arrayProblem7" placeholder="Enter numbers separated by coma..." id="input7-array"/>
+    <input type="submit" value="Result Problem 7" onclick="problem7(form)"><br/>
+    <script src="scripts.js"></script>
+</form>
+
+<div></div>
+<div></div>
+</body>
+</html>

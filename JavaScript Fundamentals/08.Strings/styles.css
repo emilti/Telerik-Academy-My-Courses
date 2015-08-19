@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+input[type="submit"] {
+    background-color: grey;
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid gray;
+    margin-top:10px;
+}
+
+input[type="button"]:hover {
+    background-color: blue;
+}
+
+form {
+    margin-top: 50px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+input[type=button]:last-of-type:hover {
+    background-color: transparent;
+
+}
+
+input[type=text] {
+    width: 150px;
+    height: 20px;
+    background-color: transparent;
+    text-align: left;
+    border-radius:10px;
+    margin:10px;
+    margin-left:0;
+}
+label{
+    color: darkblue;
+
+}
+label:hover{
+    cursor: default;
+}
+
+.reminder{
+    color:red;
+    font-size:14px;
+    margin-left:10px;
+}
+
+.textarea{
+    height:60px;
+}
+
+#fieldProblem12{
+    margin-top: 10px;
+    height:90px;
+    width:300px;
+    background-color:silver;
+    color: red;
+    margin-left: 20px;
+}
+
+#list-item{
+    height:150px;
+    width:300px;
+    margin-top:10px;
+    margin-left: 20px;
+    background-color:silver;
+    padding-top: 20px;
+}
+
+#list-item ul{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+#array{
+    margin-top:10px;
+    margin-left: 20px;
+}

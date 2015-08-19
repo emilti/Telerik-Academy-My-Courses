@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<form>
+    <label>Problem 1</label>
+    <div>
+        Problem 1. Reverse string
+
+        Write a JavaScript function that reverses a string and returns it.
+
+        Example:
+        input 	output
+        sample 	elpmas
+    </div>
+    <input type="text" name="stringProblem1" placeholder="Enter string..." id="input1"/>
+    <input type="submit" value="Result Problem 1" onclick="problem1(this.form)"><br/>
+    <label>Problem 2</label>
+    <div>
+        Problem 2. Correct brackets
+
+        Write a JavaScript function to check if in a given expression the brackets are put correctly.
+
+        Example of correct expression: ((a+b)/5-d). Example of incorrect expression: )(a+b)).
+        <div class="reminder">There are examples in the JAVASCRIPT file</div>
+    </div>
+    <input type="submit" value="Result Problem 2" onclick="problem2(this.form)"><br/>
+    <label>Problem 3</label>
+    <div>
+        Problem 3. Sub-string in text
+
+        Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).
+
+        Example:
+
+        The target sub-string is in
+
+        The text is as follows: We are living in an yellow submarine. We don't have anything else. inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.
+
+        The result is: 9
+    </div>
+    <textarea name="textProblem3" class="textarea"></textarea>
+    <input type="text" name="searchedStringProblem3" placeholder="Enter string..." id="input3"/>
+    <input type="submit" value="Result Problem 3" onclick="problem3(this.form)"><br/>
+    <label>Problem 4</label>
+        <div>
+            Problem 4. Parse tags
+            You are given a text. Write a function that changes the text in all regions:<br/>
+            &ltupcase&gttext&lt/upcase&gt to uppercase.<br/>
+            &ltlowcase&gttext&lt/lowcase&gt to lowercase<br/>
+            &ltmixcase&gttext&lt/mixcase&gt to mix casing(random)<br/>
+            Example: "We are &lt;mixcase&gt;living&lt;/mixcase&gt in a &lt;upcase&gtyellow submarine&lt;/upcase&gt. We &lt;mixcase&gtdon't&lt/mixcase&gt have &ltlowcase&gtanything&lt/lowcase&gt else.
+            <br/>
+            The expected result:<br/>
+            We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.<br/>
+            Note: Regions can be nested.
+    </div>
+    <textarea name="textProblem4" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 4" onclick="problem4(this.form)"><br/>
+    <label>Problem 5</label>
+    <div>
+        Problem 5. nbsp
+        Write a function that replaces non breaking white-spaces in a text with &nbsp;
+
+    </div>
+    <textarea name="textProblem5" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 5" onclick="problem5(this.form)"><br/>
+    <label>Problem 6</label>
+    <div>
+        Problem 6. Extract text from HTML
+        Write a function that extracts the content of a html page given as text.
+        The function should return anything that is in a tag, without the tags.
+        Example:
+        &lthtml&gt
+        &lthead&gt
+            &lttitle&gtSample site&lt/title&gt
+        &lt/head&gt
+        &ltbody&gt
+        &ltdiv&gttext
+        &ltdiv&gtmore text&lt/div&gt
+            and more...
+    &lt/div&gt
+        in body
+    &lt/body&gt
+    &lt/html&gt
+        Result: Sample sitetextmore textand more...in body
+    </div>
+    <textarea name="textProblem6" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 6" onclick="problem6(this.form)"><br/>
+    <label>Problem 7</label>
+    <div>
+        Problem 7. Parse URL
+        Write a script that parses an URL address given in the format: [protocol]://[server]/[resource] and extracts from it the [protocol], [server] and [resource] elements.
+        Return the elements in a JSON object.
+        Example:
+        URL 	result
+        http://telerikacademy.com/Courses/Courses/Details/239 	{ protocol: http,
+        server: telerikacademy.com
+        resource: /Courses/Courses/Details/239
+    </div>
+    <input type="text" name="textProblem7" placeholder="Enter domain..." id="input7"/>
+    <input type="submit" value="Result Problem 7" onclick="problem7(this.form)"><br/>
+    <label>Problem 8</label>
+    <div>
+        Problem 8. Replace tags
+
+        Write a JavaScript function that replaces in a HTML document given as string all the tags <a href="…">…</a>
+        <br/>with corresponding tags [URL=…]…/URL].
+        Example:
+        input 	output
+        <p>Please visit &lta href="http://academy.telerik.com"&gtour site&lt/a&gt to choose a training course.<br/>
+            Also visit &lta href="www.devbg.org"&gtour forum&lt/a&gt to discuss the courses.</p> 	<p>Please visit [URL=http://academy.telerik.com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.</p>
+    </div>
+    <textarea name="textProblem8" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 8" onclick="problem8(this.form)"><br/>
+    <label>Problem 9</label>
+    <div>
+        Problem 9. Extract e-mails
+        Write a function for extracting all email addresses from given text.
+        All sub-strings that match the format @… should be recognized as emails.
+        Return the emails as array of strings.
+    </div>
+    <textarea name="textProblem9" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 9" onclick="problem9(this.form)"><br/>
+    <label>Problem 10</label>
+    <div>
+        Problem 10. Find palindromes
+        Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+    </div>
+    <textarea name="textProblem10" class="textarea"></textarea>
+    <input type="submit" value="Result Problem 10" onclick="problem10(this.form)"><br/>
+    <label>Problem 11</label>
+    <div>
+        Problem 11. String format
+        Write a function that formats a string using placeholders.
+        The function should work with up to 30 placeholders and all types.
+        Examples:
+        var str = stringFormat('Hello {0}!', 'Peter');
+        //str = 'Hello Peter!';
+        var frmt = '{0}, {1}, {0} text {2}';
+        var str = stringFormat(frmt, 1, 'Pesho', 'Gosho');
+        //str = '1, Pesho, 1 text Gosho'<br/>
+        stringFormat('Hello {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11}!', 'Peter', 'edno', 'dve', 'tri', '4etiri', 'pet', 'shest', 'sedem', 'osem', 'devet', 'deset', 'edinaiset')
+    </div>
+    <input type="text" name="textProblem11" placeholder="Enter string..." id="input11"/>
+    <input type="submit" value="Result Problem 11" onclick="problem11(this.form)"><br/>
+    <label>Problem 12</label>
+    <div>
+        Problem 12. Generate list
+        Write a function that creates a HTML &ltul&gt using a template for every HTML &ltli&gt.
+        The source of the list should be an array of elements.
+        Replace all placeholders marked with –{…}– with the value of the corresponding property of the object.
+        Example: HTML:
+        &ltdiv data-type="template" id="list-item">
+        &ltstrong&gt-{name}-&lt/strong&gt &ltspan&gt-{age}-&lt/span&gt
+        &lt/div&gt
+
+            JavaScript:
+
+            var people = [{name: 'Peter', age: 14},…];
+            var tmpl = document.getElementById('list-item').innerHtml;
+            var peopleList = generateList(people, template);
+            //peopleList = '&ltul&gt&ltli&gt&ltstrong&gtPeter&lt/strong&gt &ltspan&gt14&lt/span&gt&lt/li&gt&ltli&gt…&lt/li&gt…&lt/ul&gt'
+
+        </div>
+    <div>
+    <p id="fieldProblem12" onclick="problem12()">Click me to make HTML List from var people.</p>
+    <div id = "array"> var people = [{name: 'Peter', age: 14},<br/>
+    {name: 'Gosho', age: 20},<br/>
+    {name: 'Rado', age: 18},<br/>
+    {name: 'Atanas', age: 44},<br/>
+    {name: 'Stoio', age: 9},];<br/>
+        <br/>
+    Result should appear here:
+    </div>
+    <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+</form>
+<script src="scripts.js"></script>
+</body>
+</html>

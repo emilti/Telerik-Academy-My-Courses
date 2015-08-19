@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<form>
+    <div id="reminder">The results appear in the Chrome console.Press F12.</div>
+    <label>Problem 1</label>
+    <div>Problem 1. Increase array members
+        Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5.<br/>
+        Print the obtained array on the console.
+    </div>
+    <input type="submit" value="Result Problem 1" onclick="problem1(this.form)">   <br/>
+
+    <label>Problem 2</label>
+    <div>
+    Problem 2. Lexicographically comparison<br/>
+    Write a script that compares two char arrays lexicographically (letter by letter).
+    </div>
+    <input type="text" name="secondArray1" placeholder="Enter letters separated by coma..." id="second-input1"/>
+    <input type="text" name="secondArray2" placeholder="Enter letters separated by coma..." id="second-input2"/>
+    <input type="submit" value="Result Problem 2" onclick="problem2(this.form)"><br/>
+    <label>Problem 3</label>
+    <div>Problem 3. Maximal sequence<br/>
+        Write a script that finds the maximal sequence of equal elements in an array.<br/>
+        Example:<br/>
+        input 	result<br/>
+        2, 1, 1, 2, 3, 3, 2, 2, 2, 1 	2, 2, 2</div>
+    <input type="text" name="third" placeholder="Enter numbers separated by coma..." id ="third-input"/>
+    <input type="submit" value="Result Problem 3" onclick="problem3(this.form)"><br/>
+    <label>Problem 4</label>
+    <div>
+        Problem 4. Maximal increasing sequence<br/>
+        Write a script that finds the maximal increasing sequence in an array.<br/>
+        Example:<br/>
+        input 	result<br/>
+        3, 2, 3, 4, 2, 2, 4 	2, 3, 4
+    </div>
+    <input type="text" name="fourth" placeholder="Enter numbers separated by coma..." id ="fourth-input"/>
+    <input type="submit" value="Result Problem 4" onclick="problem4(this.form)"><br/>
+    <label>Problem 5</label>
+    <div>
+        Problem 5. Selection sort<br/>
+        Sorting an array means to arrange its elements in increasing order.<br/>
+        Write a script to sort an array.<br/>
+        Use the selection sort algorithm: Find the smallest element, move it at the first position,<br/>
+        find the smallest from the rest, move it at the second position, etc.
+    </div>
+    <input type="text" name="fifth" placeholder="Enter numbers separated by coma..." id ="fifth-input"/>
+    <input type="submit" value="Result Problem 5" onclick="problem5(this.form)"><br/>
+    <label>Problem 6</label>
+    <div>
+        Problem 6. Most frequent number<br/>
+        Write a script that finds the most frequent number in an array.<br/>
+        Example:<br/>
+        input 	result<br/>
+        4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 	4 (5 times)
+    </div>
+    <input type="text" name="sixth" placeholder="Enter numbers separated by coma..." id ="sixth-input"/>
+    <input type="submit" value="Result Problem 6" onclick="problem6(this.form)"><br/>
+    <label>Problem 7</label>
+    <div>
+        Problem 7. Binary search<br/>
+        Write a script that finds the index of given element in a sorted array of integers by using the binary search algorithm.
+    </div>
+    <input type="text" name="seventhArray" placeholder="Enter numbers separated by coma..." id ="seventh-array"/>
+    <input type="text" name="seventhNumber" placeholder="Enter number..." id ="seventh-number"/>
+    <input type="submit" value="Result Problem 7" onclick="problem7(this.form)"><br/>
+</form>
+<script src="scripts.js"></script>
+
+
+
+</body>
+</html>

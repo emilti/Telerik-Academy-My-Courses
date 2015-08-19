@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<form>
+    <label>Problem 1</label>
+    Problem 1. Format with placeholders<br/>
+    Write a function that formats a string. The function should have placeholders, as shown in the example<br/>
+    Add the function to the String.prototype<br/>
+    <input type="text" name="nameProblem1" placeholder="Enter name here..." ><br/>
+    <input type="text" name="ageProblem1" placeholder="Enter age here..." ><br/>
+    <p>EXAMPLES:<br/>'My name is #{name} and I am #{age}-years-old')</p>
+    <p>'Hello, there! Are you #{name}?'</p>
+    <input type="text" name="textProblem1" placeholder="Enter text here..." ><br/>
+    <input type="submit" value="Result Problem 1" onclick="problem1(this.form)"><br/>
+    <label>Problem 2</label>
+    <br/>
+    Problem 2. HTML binding<br/>
+    Write a function that puts the value of an object into the content/attributes of HTML tags.<br/>
+    Add the function to the String.prototype<br/>
+
+    <input type="text" name="nameProblem2" placeholder="Enter name here..." ><br/>
+    <input type="text" name="linkProblem2" placeholder="Enter link here..." ><br/>
+    <p>EXAMPLES:<br/>&ltdiv data-bind-content="name"&gt&lt/div&gt</p>
+    <p>&lta data-bind-content="name" data-bind-href="link" data-bind-class="name"&gt&lt/а&gt</p>
+    <input type="text" name="textProblem2" placeholder="Enter text here..." ><br/>
+    <input type="submit" value="Result Problem 2" onclick="problem2(this.form)"><br/>
+    </form>
+<script src="scripts.js"></script>
+</body>
+</html>
