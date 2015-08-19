@@ -1,0 +1,18 @@
+A string is an object of type String whose value is text. Internally, the text is stored as a sequential read-only collection of Char objects. The Length property of a string represents the number of Char objects it contains, not the number of Unicode characters. 
+Compare(String, String) 
+Compares two specified String objects and returns an integer that indicates their relative position in the sort order.
+Contains 
+Returns a value indicating whether a specified substring occurs within this string.
+
+Format(String, Object) 
+Replaces one or more format items in a specified string with the string representation of a specified object.
+
+
+IndexOf(String, Int32) 
+Reports the zero-based index of the first occurrence of the specified string in this instance. The search starts at a specified character position.
+
+Join(String, Object[]) 
+Concatenates the elements of an object array, using the specified separator between each element.
+
+Split(Char[]) Returns a string array that contains the substrings in this instance that are delimited by elements of a specified Unicode character array.
+

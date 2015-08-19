@@ -1,0 +1,1 @@
+Maximal sum is: 26
