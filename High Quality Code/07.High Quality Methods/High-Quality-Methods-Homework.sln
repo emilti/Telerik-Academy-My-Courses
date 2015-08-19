@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Methods", "Methods\1. Methods.csproj", "{C041AAA8-7BA0-4385-A678-1D9003C1952D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1 Refactor CSharp2 1MathProblem", "2.1 Refactor CSharp2 1MathProblem\2.1 Refactor CSharp2 1MathProblem.csproj", "{26261585-6F67-4DA9-93B5-0B407659467D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2 Refactor CSharp2 2SumOfDifferences", "2.2 Refactor CSharp2 2SumOfDifferences\2.2 Refactor CSharp2 2SumOfDifferences.csproj", "{B98A5E0D-CCAD-4ED1-9BC1-E440DF1BCDC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3 RefactorCSharp 2 3Bishop Path Finder", "2.3 RefactorCSharp 2 3Bishop Path Finder\2.3 RefactorCSharp 2 3Bishop Path Finder.csproj", "{0955AD52-6BBE-4506-B71E-088B6DAF4AC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26261585-6F67-4DA9-93B5-0B407659467D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26261585-6F67-4DA9-93B5-0B407659467D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26261585-6F67-4DA9-93B5-0B407659467D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26261585-6F67-4DA9-93B5-0B407659467D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98A5E0D-CCAD-4ED1-9BC1-E440DF1BCDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98A5E0D-CCAD-4ED1-9BC1-E440DF1BCDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98A5E0D-CCAD-4ED1-9BC1-E440DF1BCDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98A5E0D-CCAD-4ED1-9BC1-E440DF1BCDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0955AD52-6BBE-4506-B71E-088B6DAF4AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0955AD52-6BBE-4506-B71E-088B6DAF4AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0955AD52-6BBE-4506-B71E-088B6DAF4AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0955AD52-6BBE-4506-B71E-088B6DAF4AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
