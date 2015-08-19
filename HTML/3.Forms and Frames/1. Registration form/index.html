@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;            
+        }
+        .centered-cell {
+            text-align: center;
+            font-weight: bold;
+        }
+        .color-cell {
+            background-color:azure;
+        } 
+    </style>
+</head>
+<body>
+    <form>
+    <table>       
+        <col width="130">
+        <col width="230">
+        <tr>
+            <td class="centered-cell">Last Name</td>
+            <td><input type="text" name="last-name" size="24"></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">First Name</td>
+            <td><input type="text" name="first-name" size="24"></td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="centered-cell">Address</td>
+            <td rowspan="3"><textarea name="Address"></textarea></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td class ="centered-cell">City</td>
+            <td><input type="text" name="city" size=13> State <input type="text" name="state" size=2></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Zip/Postal code</td>
+            <td><input type="text" name="city" size=2></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Country</td>
+            <td><select name="gender"><option value="Value 1"selected="selected">Bulgaria</option>
+            <option value="Value 2">Romania</option>
+            <option value="Value 3">Greece</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Phone(country code, area code, number)</td>
+            <td>(+<input type="text" name="country-code" size=2>) <input type="text" name="area-code" size=2> <input type="text" name="number" size=7></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">E-mail</td>
+            <td><input type="email" name="email" size=24></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Birth date</td>
+            <td><input type="email" name="email" value="дд. мм. гггг. г." size=17></td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Gender</td>
+            <td><select name="gender"> <option value="Value 1"selected="selected">Male</option>
+                <option value="Value 2">Female</option>
+                <option value="Value 3">Other</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="centered-cell">Starting date</td>
+            <td><input type="radio" name="start" value="Spring 2015" /> Spring 2015
+            <input type="radio" name="start" value="Summer 2015" />Summer 2015</td>
+        </tr>
+        <tr>
+            <td rowspan="5" class="centered-cell">Comments/Questions</td>
+            <td rowspan="5"><textarea name="comments"></textarea></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr><td colspan="2" class="centered-cell color-cell">
+    <input type="submit" name="submit" size="3">
+    <input type="reset" name="resetBtn" value="Clean this form" />
+</td></tr>
+
+</table>
+        </form>
+</body>
+</html>

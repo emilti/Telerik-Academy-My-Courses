@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Registration form", "1. Registration form\1. Registration form.csproj", "{169A409C-7131-449B-A2BC-353CED660FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. University grid", "2. University grid\2. University grid.csproj", "{CF382911-37A7-47AF-ADC5-450F5B44F6B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Notebook store", "3. Notebook store\3. Notebook store.csproj", "{61672C97-420E-4B6D-B9B1-BCAFE669F085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Grid component", "4. Grid component\4. Grid component.csproj", "{404C3E05-324F-4D65-9684-CA55D157E009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{169A409C-7131-449B-A2BC-353CED660FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169A409C-7131-449B-A2BC-353CED660FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169A409C-7131-449B-A2BC-353CED660FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169A409C-7131-449B-A2BC-353CED660FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF382911-37A7-47AF-ADC5-450F5B44F6B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF382911-37A7-47AF-ADC5-450F5B44F6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF382911-37A7-47AF-ADC5-450F5B44F6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF382911-37A7-47AF-ADC5-450F5B44F6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61672C97-420E-4B6D-B9B1-BCAFE669F085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61672C97-420E-4B6D-B9B1-BCAFE669F085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61672C97-420E-4B6D-B9B1-BCAFE669F085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61672C97-420E-4B6D-B9B1-BCAFE669F085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404C3E05-324F-4D65-9684-CA55D157E009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404C3E05-324F-4D65-9684-CA55D157E009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404C3E05-324F-4D65-9684-CA55D157E009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404C3E05-324F-4D65-9684-CA55D157E009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
