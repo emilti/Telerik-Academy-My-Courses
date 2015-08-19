@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../bower_components/handlebars/handlebars.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script id="template" type = "text/x-handlebars-template">
+</script>
+
+
+
+
+<script src="task-1.js"></script>
+<script>
+    var func = solve();
+    func('#template');
+</script>
+
+<script>
+var headers = ['Title', 'Date #1', 'Duration'];
+var items = [], count = 10;
+
+for (var i = 0; i < count; i += 1) {
+items.push({ col1: 'Title #' + i, col2: new Date() + '', col3: i });
+}
+
+var data = { headers, items };
+var template = Handlebars.compile($('#template').html());
+var compiledHTML = template(data);
+document.body.innerHTML = compiledHTML;
+
+var $table = $('table.items-table');
+
+</script>
+</body>
+</html>
