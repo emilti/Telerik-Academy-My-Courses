@@ -1,0 +1,247 @@
+﻿.gradient {
+  background: #d091fb;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d091fb), color-stop(10%, #9215f2), color-stop(10%, #9215f2), color-stop(100%, #9215f2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d091fb', endColorstr='#9215f2', GradientType=0);
+  /* IE6-9 */
+}
+body {
+  font: 14px normal Arial;
+  color: white;
+  background: #d091fb;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d091fb), color-stop(10%, #9215f2), color-stop(10%, #9215f2), color-stop(100%, #9215f2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d091fb 0%, #9215f2 10%, #9215f2 10%, #9215f2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d091fb', endColorstr='#9215f2', GradientType=0);
+  /* IE6-9 */
+  margin: 0;
+  padding: 0;
+}
+.clearfix,
+body header div#header-container,
+body header nav,
+body header nav ul,
+body header nav ul li ul.sub-nav-list,
+body section,
+body aside {
+  zoom: 1;
+}
+.clearfix:after,
+body header div#header-container:after,
+body header nav:after,
+body header nav ul:after,
+body header nav ul li ul.sub-nav-list:after,
+body section:after,
+body aside:after,
+.clearfix:before,
+body header div#header-container:before,
+body header nav:before,
+body header nav ul:before,
+body header nav ul li ul.sub-nav-list:before,
+body section:before,
+body aside:before {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after,
+body header div#header-container:after,
+body header nav:after,
+body header nav ul:after,
+body header nav ul li ul.sub-nav-list:after,
+body section:after,
+body aside:after {
+  clear: both;
+}
+body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#header-container #logo-container,
+#header-container h1 {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+#header-container #reg-form-container {
+  float: right;
+  position: relative;
+  right: 4%;
+  top: 50%;
+  margin-top: 10px;
+}
+#header-container #reg-form-container div {
+  text-align: right;
+  font: 0.9em normal Arial;
+}
+#header-container #reg-form-container div input {
+  border: 1px solid black;
+  width: 130px;
+  border-radius: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: #B35EF3;
+}
+#header-container button {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  border: 1px solid #603382;
+  border-style: outset;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: #B35EF3;
+  color: white;
+  width: 72px;
+  height: 25px;
+  font: 0.9em normal Arial;
+}
+a:hover {
+  text-decoration: underline;
+  color: #A8A8BB;
+}
+nav {
+  display: inline-block;
+  width: 75%;
+  margin: 20px 20px 20px 20px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  color: white;
+  font: 1.1em normal Arial;
+}
+nav ul li ul {
+  display: none;
+}
+nav ul li:hover ul {
+  display: block;
+  position: absolute;
+  background-color: rgba(179, 94, 243, 0.9);
+  border-radius: 5px;
+  width: 220px;
+}
+nav ul li:hover ul li {
+  position: relative;
+  display: block;
+  width: 180px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+nav ul li:hover ul li:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+.link {
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+}
+section {
+  width: 75%;
+  float: left;
+}
+section article {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 1.0em;
+  color: white;
+  border-radius: 10px;
+}
+section article footer {
+  text-align: right;
+}
+section article footer a {
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+}
+aside {
+  float: left;
+  width: 20%;
+  margin: 20px;
+}
+aside ul {
+  list-style-type: none;
+}
+aside h2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+aside > ul > li {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+aside > ul > li ul > li {
+  padding-left: 30px;
+  background: url("images/li-dot.png") no-repeat;
+}
+aside > ul > li a {
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+}
+body > footer {
+  clear: both;
+}
+body > footer p {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

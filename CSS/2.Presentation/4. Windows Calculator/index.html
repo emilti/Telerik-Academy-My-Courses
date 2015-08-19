@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="whole">
+        <div id="lefttoprow">Calculator</div>
+        <form>
+            <input type="button" class="buttonstop" id="dash" name="minimaze" value="_">
+            <input type="button" class="buttonstop" id="box" name="maximaze" value="&#x2610;">
+            <input type="button" class="buttonstop" id="x" name="close" value="X" />
+        </form>
+
+
+
+        <div id="mainframe">
+            <div id="menu">
+                <ul>
+                    <li id="view"><span class="underline">V</span>iew</li>
+                    <li id="edit"><span class="underline">E</span>dit</li>
+                    <li id="help"><span class="underline">H</span>elp</li>
+                </ul>
+            </div>
+
+
+            <div id="result">
+                <p>8854455</p>
+            </div>
+            <div id="binary">
+                <ul id="binaryrowfir" class="binariers">
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                </ul>
+                <span id="num63">
+                    63
+                </span>
+                <span id="num47">
+                    47
+                </span>
+                <span id="num32">
+                    32
+                </span>
+
+
+                <ul id="binaryrowthi">
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        0000
+                    </li>
+                    <li>
+                        1000
+                    </li>
+                    <li>
+                        0111
+                    </li>
+                    <li>
+                        0001
+                    </li>
+                    <li>
+                        1011
+                    </li>
+                    <li>
+                        1011
+                    </li>
+                    <li>
+                        0111
+                    </li>
+                </ul>
+
+                <span id="num31">
+                    31
+                </span>
+                <span id="num15">
+                    15
+                </span>
+                <span id="num0">
+                    0
+                </span>
+            </div>
+
+            <div id="numsystem">
+                <p id="radiobuttons">
+                    <input type="radio" name="system" value="hex">Hex<br>
+                    <input type="radio" name="system" value="dec">Dec<br>
+                    <input type="radio" name="system" value="oct">Oct<br>
+                    <input type="radio" name="system" value="bin">Bin<br>
+                </p>
+            </div>
+            <div id="calcbuttons">
+                <span><input type="button" disabled class="buttons disabled" name="empty" placeholder=""></span>
+                <span><input type="button" class="buttons enabled operators" name="Mod" value="Mod"></span>
+                <span><input type="button" disabled class="buttons disabled" name="A" value="A"></span>
+                <span><input type="button" class="buttons enabled mbuttons" name="MC" value="MC"></span>
+                <span><input type="button" class="buttons enabled mbuttons" name="MR" value="MR"></span>
+                <span><input type="button" class="buttons enabled mbuttons" name="MS" value="MS"></span>
+                <span><input type="button" class="buttons enabled mbuttons" name="M+" value="M+"></span>
+                <span><input type="button" class="buttons enabled mbuttons" name="M-" value="M-"></span>
+
+
+
+                <input type="button" class="buttons enabled operators" name="leftpar" value="(">
+                <input type="button" class="buttons enabled operators" name="rightpar" value=")">
+                <input type="button" disabled class="buttons disabled" name="B" value="B">
+                <input type="button" class="buttons enabled operators" name="larr" value="&larr;">
+                <input type="button" class="buttons enabled operators" name="CE" value="CE">
+                <input type="button" class="buttons enabled operators" name="C" value="C">
+                <input type="button" class="buttons enabled operators" name="plusminus" value="&plusmn;">
+                <input type="button" disabled class="buttons disabled" name="sqrt" value="&radic;">
+
+                <input type="button" class="buttons enabled operators" name="RoL" value="RoL">
+                <input type="button" class="buttons enabled operators" name="RoR" value="RoR">
+                <input type="button" disabled class="buttons disabled" name="C" value="C">
+                <input type="button" class="buttons enabled numbers" name="7" value="7">
+                <input type="button" class="buttons enabled numbers" name="8" value="8">
+                <input type="button" class="buttons enabled numbers" name="9" value="9">
+                <input type="button" class="buttons enabled operators" name="/" value="/">
+                <input type="button" disabled class="buttons disabled" name="%" value="%">
+
+
+                <input type="button" class="buttons enabled operators" name="Or" value="Or">
+                <input type="button" class="buttons enabled operators" name=" xor" value="Xor">
+                <input type="button" disabled class="buttons disabled" name="D" value="D">
+                <input type="button" class="buttons enabled numbers" name=" 4" value="4">
+                <input type="button" class="buttons enabled numbers" name=" 5" value="5">
+                <input type="button" class="buttons enabled numbers" name=" 6" value="6">
+                <input type="button" class="buttons enabled operators" name=" *" value="*">
+                <input type="button" disabled class="buttons disabled" name="1/x" value="1/x">
+                <div id="fiverow">
+                    <input type="button" class="buttons enabled operators" name="Lsh" value="Lsh">
+                    <input type="button" class="buttons enabled operators" name="Rsh" value="Rsh">
+                    <input type="button" disabled class="buttons disabled" name="E" value="E">
+                    <input type="button" class="buttons enabled numbers" name="1" value="1">
+                    <input type="button" class="buttons enabled numbers" name="2" value="2">
+                    <input type="button" class="buttons enabled numbers" name="3" value="3">
+                    <input type="button" class="buttons enabled operators" name="-" value="-">                    
+                </div>
+                <div>
+                    <input type="button" id="equal" name="=" value="=" class="enabled operators">
+                </div>
+                <div id="sixrowleft">
+                    <input type="button" class="buttons  enabled operators" name="Not" value="Not">
+                    <input type="button" class="buttons  enabled operators" name="And" value="And">
+                    <input type="button" disabled class="buttons disabled" name="F" value="F">
+                </div>
+                <div id="sixrowright">
+                    <input type="button" disabled class="buttons disabled" name="dot" value=".">
+                    <input type="button" class="buttons enabled operators" name="plus" value="+">
+                </div>
+                <div>
+                    <input type="button" id="zero" name="0" value="0" class="enabled numbers">
+                </div>
+            </div>                  
+           
+
+
+            <div id="memsystem">
+                <p id="radiobuttonsmem">
+                    <input type="radio" name="word" value="Qword">Qword<br>
+                    <input type="radio" name="word" value="Dword">Dword<br>
+                    <input type="radio" name="word" value="Word">Word<br>
+                    <input type="radio" name="word" value="Byte">Byte<br>
+                </p>
+            </div>
+
+
+        </div>
+            </div>
+    
+    <p id="notice">Pravilno e orazmereno za Firefox</p>   
+          
+</body>
+</html>

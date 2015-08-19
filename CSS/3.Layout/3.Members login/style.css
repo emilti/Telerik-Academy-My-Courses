@@ -1,0 +1,75 @@
+﻿body {
+    font:12px;
+}
+#main-frame{
+    background: linear-gradient(180deg, #3B3B3B 17%,#292929  22%,#3B3B3B 24%);
+    width:41.4em;
+    height:18.5em;
+    border-radius:8px;
+    position:relative;
+}
+
+#monitor{
+    position:relative;
+    left:0.5em;
+    top:0.4em;
+}
+
+#members-login{
+    font-size:1.4em;
+    color:white;
+    position:relative;
+    left:0.8em;
+    top:-0.9em;
+    font-weight:bold;
+    font-family:Georgia Verdana;
+}
+
+form input{
+    height:20px;
+    padding:0 0 0 10px;
+    color:black;
+}
+
+#name{
+     position:relative;
+     left:18em;
+     top:-3em;
+     width:11em;
+}
+
+#email{
+    position:relative;
+     left:19em;
+     top:-3em;
+     width:11em;
+}
+
+#go{
+     position:relative;
+     left:36.5em;
+     top:-4.5em;
+}
+
+#head{
+    position:relative;
+    font-size:1.95em;
+    color:#FADA16;
+    left:0.5em;
+    top:-2.3em;
+    font-weight:100;
+    font-family:Georgia Verdana;
+}
+
+#main-text{
+    color:#A5A5A5;
+    position:absolute;
+    left:1em;
+    font-family:Georgia Verdana;
+    font-size:0.9em;
+    top:8em;
+    width:37em;
+}
+#white{
+    color:white;
+}

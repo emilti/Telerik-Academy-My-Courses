@@ -1,0 +1,130 @@
+﻿body {
+    font:10px
+}
+
+#mainframe{
+    position:relative;
+    width:26em;
+    height:34em;
+    background:#EEEEEE;
+    border-radius:10px;
+}
+
+#caption{
+    font:1.1em Consolas, Arial;
+    position:absolute;
+    top:1em;
+    left:1em;
+}
+
+.whiteframes{
+    position:relative;
+    background:white;
+    width:24em;
+    height:7.7em;
+    left:1.0em;
+    border:1px solid #BEBEBE;
+}
+
+.pic{
+    position:absolute;
+        top:0.9em;
+        left:1em
+}
+
+#first{
+    top:4.2em;
+}
+
+#second{    
+    top:6.3em;
+}
+
+#third{   
+    top:8.4em;
+    height:8.5em;
+}
+
+.text{
+    position:absolute;    
+    left:15em;
+    width:15em;
+    height:4em;
+    font:0.76em arial
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.buttonlisten{
+    background:url(buttonlisten.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:5.5em;
+    height:1.9em;
+    position:absolute;
+    top:6.7em;
+    left:18.2em;
+    border:2px outset red;
+}
+
+.buttonadd{
+    background:url(buttonlisten.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:4.0em;
+    height:1.9em;
+    position:absolute;
+    top:6.7em;
+    left:24em;
+}
+
+.listentext{
+    position:absolute;
+    bottom:1.25em;
+    left:24em;
+    font:0.7em Consolas;
+    color:white;
+    z-index:1;
+}
+.addtext{
+    position:absolute;
+    bottom:1.25em;
+    left:30.5em;
+    font:0.7em Consolas;
+    color:white;
+    z-index:1;
+}
+
+#listendown{
+    bottom:2.0em;
+    background:url(buttonlisten.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:5.5em;
+    height:1.9em;
+    position:absolute;
+    top:7.8em;
+    left:18.2em;
+    border:2px outset red;
+}
+
+#adddown{
+    background:url(buttonlisten.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:4.0em;
+    height:2em;
+    position:absolute;
+    top:7.8em;
+    left:24em;
+}
+
+#listentextdown{
+    bottom:1.05em;
+}
+
+#addtextdown{
+    bottom:1.05em;
+}

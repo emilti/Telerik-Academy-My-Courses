@@ -1,0 +1,36 @@
+﻿body,ul,li{
+    margin:0;
+    padding:0;  
+    list-style:none; 
+}
+
+#mainmenu{
+    margin-left:10px;
+}
+ul {     
+    list-style:none; 
+    margin-left:10px; 
+}
+
+li{   
+    width:100px;
+}
+
+.listitems {
+    text-decoration:underline;
+}
+.sublisttems{
+    color:#888888;
+}
+
+li ul{
+    display:none;
+}
+
+
+li:hover>ul{
+       display:block;
+ }
+
+
+

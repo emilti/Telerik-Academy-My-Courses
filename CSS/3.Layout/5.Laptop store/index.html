@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <h1>
+            <a href="#">Apple</a>
+            <a href="#">Toshiba</a>
+            <a href="#">Lenovo</a>
+            <a href="#">Dell</a>
+            <a href="#">Asus</a>
+            <a href="#">Hacer</a>
+            <a href="#">HP</a>
+        </h1>
+        <hr />
+        <div id="laptops-container">
+            <fieldset id="first" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+            <fieldset id="second" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+            <fieldset id="third" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+            <fieldset id="fourth" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+            <fieldset id="fifth" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+            <fieldset id="sixth" class="laptops">
+                <legend>Apple MacBook Air</legend>
+                <img src="laptop.png" id="pic" />
+                <div class="inner-space">
+                    <span id="mem">64 GB SSD</span>
+                    <span id="ram">2 GB DDR</span>
+                    <span id="price">1300 USD</span>
+                    <span id="model">Intel Core i5</span>
+                </div>
+            </fieldset>
+        </div>
+        <div id="sliders">
+            <form onsubmit="return false" oninput="minpriceoutput.value = minpricerange.valueAsNumber">
+                <span class="side-text">Min price: <output for="minprice" name="minpriceoutput">500</output> USD</span><br />
+                <input name="minpricerange" id="minprice" type="range" min="0" max="1000" value="500">
+            </form>
+            <form onsubmit="return false" oninput="maxpriceoutput.value = maxpricerange.valueAsNumber">
+                <span class="side-text">Max price: <output for="maxprice" name="maxpriceoutput">500</output> USD</span><br />
+                <input name="maxpricerange" id="maxprice" type="range" min="1000" max="2000" value="1500">
+            </form>
+            <form onsubmit="return false" oninput="minramoutput.value = minramrange.valueAsNumber">
+                <span class="side-text">Min RAM: <output for="minram" name="minramoutput">4</output> GB</span><br />
+                <input name="minramrange" id="minram" type="range" min="0" max="8" value="4">
+            </form>
+
+            <form onsubmit="return false" oninput="maxramoutput.value = maxramrange.valueAsNumber">
+                <span class="side-text">Max RAM: <output for="maxram" name="maxramoutput">16</output> GB</span><br />
+                <input name="maxramrange" id="maxram" type="range" min="8" max="32" value="16">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

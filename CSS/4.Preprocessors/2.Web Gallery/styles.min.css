@@ -1,0 +1,1 @@
+﻿img.big-images{display:none}label img:last-child{display:none}input{display:none}input:checked+label img:last-child{display:block;position:absolute;top:200px;left:200px;width:250px;height:250px}
