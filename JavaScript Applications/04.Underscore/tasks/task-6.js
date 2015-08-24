@@ -1,0 +1,35 @@
+/*
+ Create a function that:
+ *   **Takes** a collection of books
+ *   Each book has propeties `title` and `author`
+ **  `author` is an object that has properties `firstName` and `lastName`
+ *   **finds** the most popular author (the author with biggest number of books)
+ *   **prints** the author to the console
+ *	if there is more than one author print them all sorted in ascending order by fullname
+ *   fullname is the concatenation of `firstName`, ' ' (empty space) and `lastName`
+ *   **Use underscore.js for all operations**
+ */
+
+function solve(){
+    return function (books) {
+        var authors = _.pluck(books, 'author')
+        var authorCounts = _.chain(authors).each(function(author){
+            author.fullname = author.firstName + ' ' + author.lastName;
+            //console.log(author.fullname);
+            }).countBy(function(author){
+                return author.fullname
+            }).value();
+        console.log(JSON.stringify(authorCounts));
+
+        var sortedAuthors = _.sortBy(authorCounts, function(author){
+            return author;
+        })
+        //console.log(JSON.stringify(sortedArray));
+        _.each(authorCounts, function(count){
+            console.log(count);
+        })
+
+    };
+}
+
+module.exports = solve;
