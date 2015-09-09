@@ -30,6 +30,15 @@
         //        .addClass('hidden');
         //}
         //
+        if (localStorage.getItem('STORAGE_USERNAME_KEY')){
+            $('#btn-logout').addClass('hidden');
+            $('#btn-go-to-login')
+                .removeClass('hidden');
+            $('#btn-go-to-register')
+                .removeClass('hidden');
+            location ='#/';
+        }
+
         $('#btn-logout').on('click',function(){
                 data.users.logout()
                 .then(function(){

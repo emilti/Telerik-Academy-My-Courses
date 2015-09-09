@@ -1,5 +1,7 @@
 var data = (function(){
-    var STORAGE_SESSION_KEY = 'SESSION_KEY';
+    var STORAGE_SESSION_KEY = 'SESSION_KEY',
+        STORAGE_USERNAME_KEY = 'STORAGE_USERNAME_KEY',
+        STORAGE_PASSWORD_KEY =  'STORAGE_PASSWORD_KEY';
     /*User*/
     function register(user){
         var promise = new Promise(function(resolve, reject){
@@ -16,6 +18,8 @@ var data = (function(){
                     contentType: 'application/json',
                     data: JSON.stringify(reqUser),
                     success: function(res){
+                        localStorage.setItem(STORAGE_USERNAME_KEY, reqUser.username);
+                        localStorage.setItem(STORAGE_PASSWORD_KEY, reqUser.password);
                         toastr.success('User registered');
                         resolve(res);
                     },
@@ -43,7 +47,9 @@ var data = (function(){
                 data: JSON.stringify(reqUser),
                 success: function(res){
                      console.log(res);
-                    localStorage.setItem(STORAGE_SESSION_KEY, res.sessionKey)
+                    localStorage.setItem(STORAGE_SESSION_KEY, res.sessionKey);
+                    localStorage.setItem(STORAGE_USERNAME_KEY, reqUser.username);
+                    localStorage.setItem(STORAGE_PASSWORD_KEY, reqUser.password);
                     toastr.success('User logged in');
                     resolve(res);
                 },error:function(err){
@@ -66,7 +72,9 @@ var data = (function(){
                     'X-SessionKey': localStorage.getItem(STORAGE_SESSION_KEY)
                 },
                 success: function(res){
-                    localStorage.removeItem(STORAGE_SESSION_KEY)
+                    localStorage.removeItem(STORAGE_SESSION_KEY);
+                    localStorage.removeItem(STORAGE_USERNAME_KEY);
+                    localStorage.removeItem(STORAGE_PASSWORD_KEY);
                     toastr.success('User log-out');
                     resolve(res);
                 },error:function(err){

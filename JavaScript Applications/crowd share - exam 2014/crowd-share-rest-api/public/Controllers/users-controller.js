@@ -51,8 +51,6 @@ var usersController = (function(){
                                 .addClass('hidden');
                             $('#btn-logout').removeClass('hidden');
                             context.redirect('#/')
-
-
                         })
                 });
 
