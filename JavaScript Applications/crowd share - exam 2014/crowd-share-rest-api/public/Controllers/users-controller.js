@@ -13,8 +13,15 @@ var usersController = (function(){
                     if (validator.password(user) === true) {
                         data.users.register(user)
                             .then(function (res) {
+                                $('#btn-go-to-login')
+                                    .addClass('hidden');
+                                $('#btn-go-to-register')
+                                    .addClass('hidden');
+                                $('#btn-logout').removeClass('hidden');
                                 context.redirect('#/')
-                                document.location.reload(true);
+                                // document.location.reload(true);
+
+
                             })
                     } else {
                         toastr.error('Invalid password confirmation');
@@ -37,8 +44,15 @@ var usersController = (function(){
                     data.users.login(user)
                         .then(function(){
                             // console.log('User logged-in') ;
-                            document.location.reload(true);
+                            // document.location.reload(true);
+                            $('#btn-go-to-login')
+                                .addClass('hidden');
+                            $('#btn-go-to-register')
+                                .addClass('hidden');
+                            $('#btn-logout').removeClass('hidden');
                             context.redirect('#/')
+
+
                         })
                 });
 

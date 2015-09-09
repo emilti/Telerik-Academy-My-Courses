@@ -79,11 +79,67 @@ var data = (function(){
         return promise;
     }
 
+    function getAllPosts() {
+        var promise = new Promise(function (resolve, reject) {
+            var url = '/post';
+
+            // var reqUser = {
+            //    username: user.username,
+            //    passHash: CryptoJS.SHA1(user.password).toString()
+            // }
+
+            //var authKey = 'undefined-D%kTENBHKjWr^K^Trx_lM-dE!VWqV-kymepJoQz!QBVCYYXK%$'
+            $.ajax(url, {
+                method: 'GET',
+                contentType: 'application/json',
+                success: function (res) {
+                    console.log(res);
+                    resolve(res);
+                },
+                error: function(err){
+                    reject(err);
+                }
+            });
+        });
+
+        return promise;
+    }
+
+
+
+    function addPost(post){
+        var promise = new Promise(function(resolve, reject){
+            var url = '/post';
+
+            $.ajax(url,{
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(post),
+                headers: {
+                    'X-SessionKey': localStorage.getItem(STORAGE_SESSION_KEY)
+                },
+                success: function(res){
+                    toastr.success('Post added');
+                    resolve(res);
+                },error:function(err){
+                    toastr.error('Unsuccessful login');
+                    reject(err);
+                }
+            })
+        });
+
+        return promise;
+    }
+
     return {
         users:{
             register: register,
             login: login,
             logout: logout
+        },
+        posts:{
+            addPost: addPost,
+            allPosts: getAllPosts
         }
     }
 }())
