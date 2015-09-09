@@ -1,16 +1,12 @@
 validator = (function(){
     function validatePassword(user) {
-        var promise = new Promise(function (resolve, reject) {
             if (user.password === user.password2) {
-                resolve()
+              return true
             } else {
-                reject()
+                return false;
             }
+        }
 
-        })
-
-        return promise;
-    }
 
     return {
         password: validatePassword

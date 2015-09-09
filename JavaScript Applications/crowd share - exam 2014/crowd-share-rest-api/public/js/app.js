@@ -7,6 +7,7 @@
         this.get('#/home', homeController.all);
         this.get('#/register', usersController.register);
         this.get('#/login', usersController.login);
+        // this.get('#/home', usersController.logout);
         // this.get('#/todos', todosController.all);
         // this.get('#/todos/add', todosController.add);
         // this.get('#/events', eventsController.all);
@@ -17,17 +18,24 @@
 
     $(function(){
         sammmyApp.run('#/');
+        console.log('1111')
+        console.log(usersController.current());
+        if (usersController.current()){
+            $('#btn-go-to-login')
+                .addClass('hidden');
+            $('#btn-go-to-register')
+                .addClass('hidden');
+        } else {
+            $('#btn-logout')
+                .addClass('hidden');
+        }
 
-    //    $.ajax('api/categories',{
-    //        contentType: 'application/json',
-    //        headers: {
-    //            'x-auth-key': localStorage.getItem('SPECIAL_AUTHENTICATION_KEY')
-    //        },
-    //        success: function(categories){
-    //            toastr.info(JSON.stringify(categories));
-    //            // resolve(categories);
-    //        }
-    //
-    //    });
+        $('#btn-logout').on('click',function(){
+                data.users.logout()
+                .then(function(){
+                    location ='#/';
+                    document.location.reload(true);
+                })
+        })
     });
 }());

@@ -16,12 +16,12 @@ var data = (function(){
                     contentType: 'application/json',
                     data: JSON.stringify(reqUser),
                     success: function(res){
-                        console.log(res);
                         toastr.success('User registered');
                         resolve(res);
                     },
                     error:function(err){
                         toastr.error('Unsuccessful registration');
+                        reject(err);
                     }
                 }
             )
@@ -43,9 +43,35 @@ var data = (function(){
                 data: JSON.stringify(reqUser),
                 success: function(res){
                      console.log(res);
-                    //localStorage.setItem(STORAGE_SESSION_KEY, res)
+                    localStorage.setItem(STORAGE_SESSION_KEY, res.sessionKey)
                     toastr.success('User logged in');
                     resolve(res);
+                },error:function(err){
+                    toastr.error('Unsuccessful login');
+                    reject(err);
+                }
+            })
+        });
+
+        return promise;
+    }
+
+    function logout(){
+        var promise = new Promise(function(resolve, reject){
+            var url = '/user';
+            $.ajax(url,{
+                method: 'PUT',
+                contentType: 'application/json',
+                headers: {
+                    'X-SessionKey': localStorage.getItem(STORAGE_SESSION_KEY)
+                },
+                success: function(res){
+                    localStorage.removeItem(STORAGE_SESSION_KEY)
+                    toastr.success('User log-out');
+                    resolve(res);
+                },error:function(err){
+                    toastr.error('Unsuccessful log-out');
+                    reject(err);
                 }
             })
         });
@@ -56,7 +82,8 @@ var data = (function(){
     return {
         users:{
             register: register,
-            login: login
+            login: login,
+            logout: logout
         }
     }
 }())

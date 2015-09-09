@@ -10,14 +10,15 @@ var usersController = (function(){
                         password2: $('#tb-register-password2').val()
                     };
 
-                    validator.password(user)
-                        .then(data.users.register(user)
-                       ,function() {
-                            toastr.error('Password is wrong');
-                        })
-                        .then(function(res){
-
-                        })
+                    if (validator.password(user) === true) {
+                        data.users.register(user)
+                            .then(function (res) {
+                                context.redirect('#/')
+                                document.location.reload(true);
+                            })
+                    } else {
+                        toastr.error('Invalid password confirmation');
+                    }
 
                 });
             });
@@ -33,10 +34,10 @@ var usersController = (function(){
                         password: $('#tb-login-password').val()
                     };
 
-                    console.log(user);
                     data.users.login(user)
                         .then(function(){
                             // console.log('User logged-in') ;
+                            document.location.reload(true);
                             context.redirect('#/')
                         })
                 });
@@ -46,10 +47,24 @@ var usersController = (function(){
 
 
 
+    function getCurrentUser(){
+        var sessionKey = localStorage.getItem('SESSION_KEY');
+        if (!sessionKey){
+            return null;
+        }
+
+        return {
+            sessionKey: sessionKey
+        }
+    }
+
+
+
 
     return {
         register: register,
-        login: login
+        login: login,
+        current: getCurrentUser
     }
 }());
 
