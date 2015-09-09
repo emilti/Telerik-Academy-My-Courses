@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Crowd share</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+</head>
+<body>
+
+
+<div id="root">
+    <div class="container">
+    <header>
+
+            <div class="row">
+                <h1 class="col-md-5">Simple forum...</h1>
+                <div id="login-controls" class =" col-md-3">
+                    <button id="btn-go-to-login" class="btn-default"><a  href="#/login">Login</a></button>
+                    <button id="btn-go-to-register" class="btn-default"><a  href="#/register">Register</a></button>
+                    <button id="btn-logout" class="btn-default" href="#/login">Logout</button>
+                </div>
+            </div>
+
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/home">home</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="content">
+    </div>
+    </div>
+</div>
+
+<!--LIBS-->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/sammy/lib/sammy.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+<script src="bower_components/sha1/index.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
+
+<!--App-->
+
+<!--Validators-->
+<script src="js/validator.js"></script>
+<!--Controllers-->
+<script src="Controllers/home-controller.js"></script>
+<script src="Controllers/users-controller.js"></script>
+
+
+<!-- SETUP-->
+<script src="js/app.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/data.js"></script>
+
+
+</body>
+</html>

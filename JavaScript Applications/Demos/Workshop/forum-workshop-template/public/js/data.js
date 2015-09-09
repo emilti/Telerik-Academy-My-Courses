@@ -12,7 +12,7 @@ var data = (function(){
            console.log(reqUser);
 
            $.ajax({
-               url: 'api/auth',
+               url: '/auth',
                method: 'PUT',
                contentType: 'application/json',
                data: JSON.stringify(reqUser),
@@ -31,18 +31,18 @@ var data = (function(){
         var prom = new Promise(function(resolve, reject) {
             var reqUser = {
                 username: user.username,
-                passHash: CryptoJS.SHA1(user.password).toString()
+                authCode: CryptoJS.SHA1(user.password).toString()
             };
             console.log(user);
             console.log(reqUser);
             $.ajax({
-                url: 'api/users',
+                url: '/users',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(reqUser),
                 success: function (user) {
                     localStorage.setItem(USERNAME_STORAGE_KEY, user.username);
-                    localStorage.setItem(AUTH_KEY_STORAGE_KEY, user.authKey);
+                    localStorage.setItem(AUTH_KEY_STORAGE_KEY, user.authCode);
                     resolve(user);
                 }
             });
@@ -136,7 +136,7 @@ var data = (function(){
 
 
     return {
-       users:{
+       user:{
            login: userLogin,
            register: userRegister,
            logout: userLogout,

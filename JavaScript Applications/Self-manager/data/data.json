@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "username": "",
+      "passHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "usernameLower": "",
+      "authKey": "undefinedYPr#ZGvFcLGY-UI+oFjnCcUUIDi&egbRCHoE^do=$@VtFs(LJcP",
+      "id": "2b83a0bd-26ed-4633-aedc-c3d6d95742b4"
+    },
+    {
+      "username": "emo1",
+      "passHash": "356a192b7913b04c54574d18c28d46e6395428ab",
+      "usernameLower": "emo1",
+      "authKey": "undefinedOjMZcmdp)GzNqHYrqQUTARYdE-%r(sw^ku-&BBfMBmTwQi%Igh*",
+      "id": "905a9f67-09a6-460a-b285-7a65aa06c1a8",
+      "todos": [
+        {
+          "id": 457243,
+          "text": "todo1",
+          "state": true,
+          "category": "todo1"
+        },
+        {
+          "id": 488742,
+          "text": "todo2",
+          "state": true,
+          "category": "todo2"
+        },
+        {
+          "id": 583162,
+          "text": "todo3",
+          "state": false,
+          "category": "todo3"
+        },
+        {
+          "id": 207673,
+          "text": "yyy",
+          "state": false,
+          "category": "uncategorized"
+        },
+        {
+          "id": 309563,
+          "text": "yyy",
+          "state": false,
+          "category": "sas"
+        },
+        {
+          "id": 653520,
+          "text": "aa",
+          "state": false,
+          "category": "a"
+        },
+        {
+          "id": 225222,
+          "text": "mmm",
+          "state": false,
+          "category": "todo1"
+        }
+      ]
+    },
+    {
+      "username": "pesho ",
+      "passHash": "356a192b7913b04c54574d18c28d46e6395428ab",
+      "usernameLower": "pesho ",
+      "authKey": "undefined=kLQCAEhHKM#*reNcxoTqLDal%fVx#f-yxEiil*!FelXuEw&uq(",
+      "id": "85c22b31-2268-49b2-a383-898a1f9d7ed1"
+    },
+    {
+      "username": "pesho",
+      "passHash": "356a192b7913b04c54574d18c28d46e6395428ab",
+      "usernameLower": "pesho",
+      "authKey": "undefinedMMQuAH-K^zxEDcH(=rtKy-q+$mSsU*Bnw&e(G^hU(Obp$x-JqPd",
+      "id": "d691fd3b-4aa9-4708-830e-bcb2c06a1568"
+    },
+    {
+      "username": "emo2",
+      "passHash": "da4b9237bacccdf19c0760cab7aec4a8359010b0",
+      "usernameLower": "emo2",
+      "authKey": "undefinedEWmhq^*UYWu!M$wnD^OPdi(f$gAtXzQhqM$dl$D_RU$kxRYsM=I",
+      "id": "0f6922ec-a347-47a5-a8a5-a705aff9736a"
+    },
+    {
+      "username": "emo4",
+      "passHash": "1b6453892473a467d07372d45eb05abc2031647a",
+      "usernameLower": "emo4",
+      "authKey": "undefinedGgn(+yBl_K_^=qcRgveXkOvi^NN-IMatt#aebp*wI&nZy*KSyn^",
+      "id": "ca8d587b-b484-4a21-a3f7-4571654d9a10",
+      "todos": [
+        {
+          "id": 887992,
+          "text": "edno",
+          "state": true,
+          "category": "edno"
+        }
+      ]
+    }
+  ]
+}
