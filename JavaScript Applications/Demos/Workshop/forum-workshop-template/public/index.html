@@ -81,7 +81,7 @@
     this.get('#/login', function(context){
       var that = this;
 
-      if (data.users.current()){
+      if (data.user.current()){
         context.redirect('#/');
         return;
       }
@@ -96,7 +96,7 @@
                   password: $('#tb-pass').val()
                 };
 
-                data.users.login(user)
+                data.user.login(user)
                         .then(function(user){
                           context.redirect('#/');
                           document.location.reload(true);
@@ -109,7 +109,7 @@
                   password: $('#tb-pass').val()
                 };
 
-                data.users.register(user)
+                data.user.register(user)
                         .then(function(user){
                           context.redirect('#/')
                         });
@@ -168,7 +168,7 @@
 
   $(function(){
     sammyApp.run('#/');
-    if (data.users.current()){
+    if (data.user.current()){
       $('#btn-go-to-login')
               .addClass('hidden');
     } else {
@@ -177,7 +177,7 @@
     }
 
     $('#btn-logout').on('click',function(){
-      data.users.logout()
+      data.user.logout()
               .then(function(){
                 location ='#/';
                 document.location.reload(true);
