@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1fc8f8b5-15d1-4703-ba67-c5f03c749255" name="BuilderPattern" linkedPackageId="175d59a2-af3f-41bd-ab8b-4e1d38eaec59" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="787bff32-e44c-46d7-84c9-ec14ad8f1760">
+      <profileInstance Id="38dde041-f8aa-4b0e-9e8d-aafa5223dcda" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="742b2a45-a86d-4381-bfd6-2481d43873c1">
+      <profileInstance Id="144f8c06-ce6b-41b0-9ed9-46cd7088bc15" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7da2a1a4-7f79-4300-8f92-d0e2e22ba377" name="Builder" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f89937b-c657-48d5-abb7-f4858500bce2" />
+        <ownedOperations>
+          <operation Id="a5dddaf9-f57a-456b-a878-67f6b8491b7f" name="BuildPart" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="721efc89-802d-4348-aed0-53f709f22bf6" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e18b21dd-e307-432c-96f9-a05cc3c56b5e" name="ConcreteBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="120ce8b0-2a77-4b57-94d7-659541babafd" />
+        <suppliersInternal>
+          <dependency Id="4f21b087-8e5c-428f-b8a0-09ccd86ef107">
+            <interfaceMoniker Id="7da2a1a4-7f79-4300-8f92-d0e2e22ba377" LastKnownName="Builder" />
+            <elementDefinition Id="b71ba8d5-61d2-4ca4-b170-248abcad1cd4" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a0682bad-db2d-445e-8396-555cb2e59e48" name="BuildPart" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e906820c-1eee-464f-8671-f52f43bb91a6" />
+          </operation>
+          <operation Id="60a2ab1c-aa11-4c00-881a-d677fd71aa06" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bb85269f-2ab6-409d-bc80-708e0873560f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6cf625bf-2449-44e9-a8e7-da1f0037242d" name="Director" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eae2ed85-956f-4853-a907-4b2ba70819c2" />
+        <targetEnds>
+          <association Id="a923d830-59d6-4a46-b3a5-2c92a5657c75" isDerived="false" sourceEndRoleName="Director" targetEndRoleName="Builder" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="7da2a1a4-7f79-4300-8f92-d0e2e22ba377" LastKnownName="Builder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b637d059-2075-4067-a22d-8fde2900c7a3" name="Director" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6c8427cb-68e9-48f1-b458-fd163ee35b05" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2fd4631-cfe4-4722-aca1-bb8d9d2edb8b" name="Builder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="e67086ae-2ff6-4af0-9c65-6cc477768fbc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2f4f4fd0-57c1-43ef-93de-0cdc5e29c7a9" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="a9567700-f305-4df1-9873-14d37fb3e624" name="Construct" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8fc8e3f0-1ddd-474b-94d7-e3e343fc5d4f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="175d59a2-af3f-41bd-ab8b-4e1d38eaec59" name="Crational patterns - Factory Method">
+    <elementDefinition Id="13f4a361-dd90-4c1e-bc44-4fba5f8edceb" />
+  </package>
+</logicalClassDesignerModel>

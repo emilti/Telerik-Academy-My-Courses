@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="36cc54fa-595a-4c67-866f-1e35ba410b40" name="Singleton" linkedPackageId="c1c832db-a69e-483d-8808-6a6ea5fef3de" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a9e919d3-3cc6-4bb2-b4fa-ff21aba0ac78">
+      <profileInstance Id="1178e46f-834b-4d0e-b234-c811aa35dbd0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0c97cbad-8e7f-41e5-b50d-8f8ce96d9d5a">
+      <profileInstance Id="7e605f42-e4bc-4ee4-8741-57a34281e589" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ad65bde8-37b1-4e43-8acb-1818b42b4495" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bc37acc9-ef81-4745-b0cd-eee7a187f8ad" />
+        <ownedAttributesInternal>
+          <property Id="1b2f07f3-f7e7-4d42-9049-9370a3283710" name="singletonData" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="34d45bdf-8514-459a-a49a-229384f61804" />
+          </property>
+          <property Id="f9034804-7e63-49d2-9591-cd59a734a237" name="staticUniqueInstance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="54d82a83-1b61-4dc3-9ff8-84016e50dabd" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ccb0076b-bc12-44d3-9b24-ccfc342f60e3" name="static Instance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e76bf977-39c8-44a6-8e73-0aaad7373de1" />
+          </operation>
+          <operation Id="ea60aca3-e94b-42b0-8ee6-4e31416645e5" name="SingletonOPeration" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3bc18ef1-1c92-46c0-b488-b12352d7496c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c1c832db-a69e-483d-8808-6a6ea5fef3de" name="Crational patterns - Factory Method">
+    <elementDefinition Id="13f4a361-dd90-4c1e-bc44-4fba5f8edceb" />
+  </package>
+</logicalClassDesignerModel>

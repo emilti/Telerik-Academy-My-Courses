@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="4f07cc4d-2887-487e-999e-ac845140176c" name="UMLClassDiagram1" linkedPackageId="61a0c0f1-55e5-45cb-a156-be1c41b0bacd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f66bd34d-c5b6-4f86-8bcf-73fe01a5e458">
+      <profileInstance Id="96366beb-47d5-4c93-9ce3-59cc34de59f4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="058bfbf3-57a3-4a67-80a5-5bce922c6ed2">
+      <profileInstance Id="dbe06c11-49d8-4b93-a053-55bebfa100c1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="59cc1f1d-c504-4cbd-b3f6-1a393ecd8314" name="Product" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec25020a-12e6-4612-860f-015dd1da8360" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d9fba934-9894-48b8-b134-26d9f3bc5490" name="Creator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dadf1827-2b1a-46e8-aa6c-33b769062094" />
+        <ownedOperationsInternal>
+          <operation Id="497b1649-226f-4dd9-9d8f-cafe9427bbe6" name="FactoryMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="04459bc1-aba5-49ef-aae3-da13f490e396" />
+          </operation>
+          <operation Id="5542b4e8-fd95-4e03-8525-15fe5d04e17f" name="anOperation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="70977f43-5871-4c55-874c-13cd14e9dbe3" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd5b8ca8-1cc7-4e38-b3dc-c3e240ea8315" name="ConcreteCreator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8f087296-8294-4d83-a9a4-59c670567191" />
+        <suppliersInternal>
+          <dependency Id="b93f932e-5b58-4e41-8c18-21d3a9c7eb7a">
+            <classMoniker Id="d0764be8-3c2a-475a-8a71-3c339539fa58" LastKnownName="Product" />
+            <elementDefinition Id="36335d86-8549-4122-b4cb-6e5e5ff365b2" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="f300c491-5019-49bb-9112-0c8b8bf2cdd3" isSubstitutable="false">
+            <classMoniker Id="d9fba934-9894-48b8-b134-26d9f3bc5490" LastKnownName="Creator" />
+            <elementDefinition Id="f20089bb-212c-4a6c-8161-24b8a62b8aa1" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d0764be8-3c2a-475a-8a71-3c339539fa58" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="370a0428-acb5-41e6-8747-7465c3f1c263" />
+        <suppliersInternal>
+          <interfaceRealization Id="5b9cf9cc-7261-4e50-8a9a-d47e0dcbb0fe">
+            <interfaceMoniker Id="59cc1f1d-c504-4cbd-b3f6-1a393ecd8314" LastKnownName="Product" />
+            <elementDefinition Id="f6bbf2b8-2a17-487f-b448-a9b54de6aa61" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="61a0c0f1-55e5-45cb-a156-be1c41b0bacd" name="Crational patterns - Factory Method">
+    <elementDefinition Id="13f4a361-dd90-4c1e-bc44-4fba5f8edceb" />
+  </package>
+</logicalClassDesignerModel>

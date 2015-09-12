@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="13f4a361-dd90-4c1e-bc44-4fba5f8edceb"
+  name="Crational patterns - Factory Method" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="9972ff9a-c16a-4925-bb1f-417904c93f8e"
+        name="Factory Methdo"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="f352f742-730d-45f3-a89c-c3354e023db4"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7b056cf4-e115-4117-9762-0e81b2be9520"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d87b07b4-10a8-407e-984b-56337d390d16"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b194dbf5-ae21-43ee-95ba-45cfdd9f0bca"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e6c0bffa-3a85-4daa-9855-4741b6d1c496"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d87b07b4-10a8-407e-984b-56337d390d16"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a2e34fce-c06e-4bbb-9b16-3f813bcd2ea7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Crational patterns - Factory Method.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2bf63303-c6b7-4451-8b82-5a1763d840d6"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="ddf6ed0d-3e25-4c9a-9f29-3e54e2eebf90"
+                LastKnownName="Lifeline2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b194dbf5-ae21-43ee-95ba-45cfdd9f0bca"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6c0bffa-3a85-4daa-9855-4741b6d1c496"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9ec98fa9-8763-4ae9-baae-e6f8a1373f1d"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="ddf6ed0d-3e25-4c9a-9f29-3e54e2eebf90"
+                LastKnownName="Lifeline2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7b056cf4-e115-4117-9762-0e81b2be9520"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fce62656-8924-4b4d-825d-70fcf891816d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Crational patterns - Factory Method.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="ddf6ed0d-3e25-4c9a-9f29-3e54e2eebf90"
+            name="Lifeline2"
+            isActor="false"
+            lifelineDisplayName="Lifeline2">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2bf63303-c6b7-4451-8b82-5a1763d840d6"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9ec98fa9-8763-4ae9-baae-e6f8a1373f1d"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="a051019e-3a53-4f06-9ba1-6eda6ef87139"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="d87b07b4-10a8-407e-984b-56337d390d16"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7b056cf4-e115-4117-9762-0e81b2be9520"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="ad716c2c-7aec-4919-b259-30032158be4e"
+            name="Message1"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2bf63303-c6b7-4451-8b82-5a1763d840d6"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b194dbf5-ae21-43ee-95ba-45cfdd9f0bca"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="430898de-5175-44e4-9d43-d38141c27802"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6c0bffa-3a85-4daa-9855-4741b6d1c496"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9ec98fa9-8763-4ae9-baae-e6f8a1373f1d"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="Crational patterns - Factory Method.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a2e34fce-c06e-4bbb-9b16-3f813bcd2ea7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fce62656-8924-4b4d-825d-70fcf891816d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="a953083d-e41a-482f-9381-b76d9911b1b3"
+        name="Factory Method"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <objectNode
+            Id="27e1dfee-3ac7-4ad0-8199-7db066ba3106"
+            name="Interface"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="06fb919b-6753-43b6-a661-045a3725b66d"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="3916784f-f980-4257-bbf5-ca9ff0483d0f"
+            name="Object2"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="2dcd8f38-c3ed-4da7-adf6-2d9f835c8832"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="05a81a5a-bd7c-4d9f-aec0-5fdf19992979"
+            name="Object3"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="9ca46051-a064-45d4-97a5-48adb4c19387"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="7523c159-9c4d-40b7-91dd-5fc7e4a20ca7"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="27b6cd59-eb2a-424e-8ce0-005f48e820dc"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="cd11a31c-01c8-461d-8852-619b4ad2c877"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6b6a7738-d706-4507-ad14-d3b600ced4f9"
+        name="Interface"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="a6e52a40-a6f6-41fe-a456-248148eb0737"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="62f87e45-6609-4d37-a05b-3b9eb7a1ff8e"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ec9736b8-9d6d-4f5f-8305-74f86e1873bb"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="dc2f17c5-aac0-4ced-a240-e269ad0ba7d7"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="b91e948c-15c3-49b2-9e06-c90edd30e192"
+        name="EMoo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="5d34b699-90ed-4490-ab67-1fd905eb24e4"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="65fecc80-f6b9-428c-b926-12b32dc17a47"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="b0270213-7b03-4041-bab8-87e33361ab67"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <activityParameterNode
+            Id="3cfd911c-718c-4292-a7ed-f1c562d5d638"
+            name="sss"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="d167302d-06f9-4508-a2c1-786faf53d3aa"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </activityParameterNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="ca3227ef-61cb-4244-9fa7-4206dbfe2447"
+        name="'''''''''&#xD;&#xA;fffff&#xD;&#xA;"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="55ca832e-f670-4434-91d6-f65deb718030"
+        name="kkkkk"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9ea53ed-fd1d-4f2c-8937-c9bb18c3cea5"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6274ef96-467e-4928-a70b-23544ec3a37b"
+        name="dsddddddddd"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="ad43d3da-fcd3-440e-b811-797da5970c82"
+        name="Artifact1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ec25020a-12e6-4612-860f-015dd1da8360"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dadf1827-2b1a-46e8-aa6c-33b769062094"
+        name="Creator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="04459bc1-aba5-49ef-aae3-da13f490e396"
+            name="FactoryMethod"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="70977f43-5871-4c55-874c-13cd14e9dbe3"
+            name="anOperation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f087296-8294-4d83-a9a4-59c670567191"
+        name="ConcreteCreator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="36335d86-8549-4122-b4cb-6e5e5ff365b2">
+            <classMoniker
+              Id="370a0428-acb5-41e6-8747-7465c3f1c263"
+              LastKnownName="Product"
+              LastKnownLocation="Crational patterns - Factory Method.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="f20089bb-212c-4a6c-8161-24b8a62b8aa1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dadf1827-2b1a-46e8-aa6c-33b769062094"
+              LastKnownName="Creator"
+              LastKnownLocation="Crational patterns - Factory Method.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="370a0428-acb5-41e6-8747-7465c3f1c263"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f6bbf2b8-2a17-487f-b448-a9b54de6aa61">
+            <interfaceMoniker
+              Id="ec25020a-12e6-4612-860f-015dd1da8360"
+              LastKnownName="Product"
+              LastKnownLocation="Crational patterns - Factory Method.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bc37acc9-ef81-4745-b0cd-eee7a187f8ad"
+        name="Singleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="34d45bdf-8514-459a-a49a-229384f61804"
+            name="singletonData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="54d82a83-1b61-4dc3-9ff8-84016e50dabd"
+            name="staticUniqueInstance"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e76bf977-39c8-44a6-8e73-0aaad7373de1"
+            name="static Instance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3bc18ef1-1c92-46c0-b488-b12352d7496c"
+            name="SingletonOPeration"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7f89937b-c657-48d5-abb7-f4858500bce2"
+        name="Builder"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="721efc89-802d-4348-aed0-53f709f22bf6"
+            name="BuildPart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="120ce8b0-2a77-4b57-94d7-659541babafd"
+        name="ConcreteBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="b71ba8d5-61d2-4ca4-b170-248abcad1cd4">
+            <interfaceMoniker
+              Id="7f89937b-c657-48d5-abb7-f4858500bce2"
+              LastKnownName="Builder"
+              LastKnownLocation="Crational patterns - Factory Method.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e906820c-1eee-464f-8671-f52f43bb91a6"
+            name="BuildPart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bb85269f-2ab6-409d-bc80-708e0873560f"
+            name="GetResult"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eae2ed85-956f-4853-a907-4b2ba70819c2"
+        name="Director"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2f4f4fd0-57c1-43ef-93de-0cdc5e29c7a9"
+            isDerived="false"
+            sourceEndRoleName="Director"
+            targetEndRoleName="Builder"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="7f89937b-c657-48d5-abb7-f4858500bce2"
+              LastKnownName="Builder"
+              LastKnownLocation="Crational patterns - Factory Method.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c8427cb-68e9-48f1-b458-fd163ee35b05"
+                  name="Director"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e67086ae-2ff6-4af0-9c65-6cc477768fbc"
+                  name="Builder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="8fc8e3f0-1ddd-474b-94d7-e3e343fc5d4f"
+            name="Construct"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
