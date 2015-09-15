@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="781a4a7b-5a76-4598-b9f4-eb69307254ab"
+  name="Structural patterns" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5fdcdb17-56c0-4d28-8b58-7b87536090b9"
+        name="Client1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="597e2ff1-3025-4139-ba24-14a50a12f05d">
+            <classMoniker
+              Id="b687890c-5819-4d0e-87d2-f4fe79766df0"
+              LastKnownName="Facade"
+              LastKnownLocation="Structural patterns.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b001998f-aabf-46bd-a154-9a25f0820585"
+        name="Client2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="f8d17f48-5702-4373-93d1-57e9c0943652">
+            <classMoniker
+              Id="b687890c-5819-4d0e-87d2-f4fe79766df0"
+              LastKnownName="Facade"
+              LastKnownLocation="Structural patterns.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b687890c-5819-4d0e-87d2-f4fe79766df0"
+        name="Facade"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="76a00fa3-a19e-43c9-b6c9-43e4a3386a9a">
+            <packageMoniker
+              Id="cd572d0c-b497-4af2-a562-0e7a44434ce7"
+              LastKnownName="Package1"
+              LastKnownLocation="Package_1351.uml" />
+          </dependency>
+          <dependency
+            Id="fa874855-32ce-4c7b-aeb3-d1d175bd0c88">
+            <packageMoniker
+              Id="d28ddee6-fbd6-4cb4-8d61-d4160f3df147"
+              LastKnownName="Package2"
+              LastKnownLocation="Package_1352.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f06a8b89-eaef-4d59-a996-e276a6085875"
+            name="DoSomething"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cd572d0c-b497-4af2-a562-0e7a44434ce7"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1351.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d28ddee6-fbd6-4cb4-8d61-d4160f3df147"
+        LastKnownName="Package2"
+        LastKnownLocation="Package_1352.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6a16b1c5-a7ed-4fee-9b24-4718686f5a15"
+        name="Component"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="e4906fcd-b190-4d55-aa56-46625fd9d4f9"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5d32bc7f-0bf7-44eb-ae9a-8264c3755b0e"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d34957cc-98e1-4a7d-8b6b-b9de88f2afda"
+            name="GetChild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c4cccb22-af21-4b09-92c3-3d17b5b7a111"
+        name="Leaf"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="7d66f8e2-885d-4327-a1c3-0cdca2d80386">
+            <interfaceMoniker
+              Id="6a16b1c5-a7ed-4fee-9b24-4718686f5a15"
+              LastKnownName="Component"
+              LastKnownLocation="Structural patterns.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bd79d5ba-51c7-4f24-9d85-195d6abdba0d"
+            name="Operation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="280a8ae3-1f17-4280-a4a8-d10c107c045a"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2872ad0f-719c-4c04-bfeb-78dd814ce0c6"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="78d35944-b99c-4f12-8a3a-58e8b316654e"
+            name="GetChild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5e76135b-1c8b-49c9-a148-a1810841988e"
+        name="Composite"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6013d4f5-f89c-4dbb-b3a5-5dd35cfaeaf5">
+            <interfaceMoniker
+              Id="6a16b1c5-a7ed-4fee-9b24-4718686f5a15"
+              LastKnownName="Component"
+              LastKnownLocation="Structural patterns.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="a22d412d-0e07-4a25-b0a3-1faf2b9efe8a"
+            isDerived="false"
+            sourceEndRoleName="Composite"
+            targetEndRoleName="Component"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="6a16b1c5-a7ed-4fee-9b24-4718686f5a15"
+              LastKnownName="Component"
+              LastKnownLocation="Structural patterns.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a4b6e191-47b2-4d00-a063-efd8c628735d"
+                  name="Composite"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e6667ea-1cb4-430f-a8bc-81c96d2d3545"
+                  name="Component"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="79bfcb97-df5a-4441-9792-10c5e6b43da8"
+            name="Operation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4fa1dcae-a0b3-4d34-b6cf-7e933b5970e2"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="81cfa56d-ffef-4bca-b2d9-255ca5e31e8e"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="88284056-fb56-4eac-b700-139cc3af9c7b"
+            name="GetChild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4888a489-b56e-48b6-b5da-44d31ddc016e"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="4dce0cd4-086a-4d70-8c8a-88ce528469d0">
+            <interfaceMoniker
+              Id="e57262f4-7f22-4502-b8ed-bf0620961701"
+              LastKnownName="Subject"
+              LastKnownLocation="Structural patterns.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="180a668e-b982-40f7-932e-b5bc0473172e"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e57262f4-7f22-4502-b8ed-bf0620961701"
+        name="Subject"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="69839fe9-b94f-4b6c-8ea3-4e15b1bf55c3"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="480ef250-2e36-4063-aeb9-1eeb1d6ef802"
+        name="Proxy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="13add1d1-b7e9-4e83-adea-369ab9ec3555">
+            <interfaceMoniker
+              Id="e57262f4-7f22-4502-b8ed-bf0620961701"
+              LastKnownName="Subject"
+              LastKnownLocation="Structural patterns.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="ed31aed1-4a0e-44eb-ae81-000b59a4024a"
+            isDerived="false"
+            sourceEndRoleName="Proxy"
+            targetEndRoleName="RealSubject"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d57907ec-8a26-4986-8f08-fbace8bcae20"
+              LastKnownName="RealSubject"
+              LastKnownLocation="Structural patterns.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1da6f6a5-9782-4144-81e2-49214d69ac0b"
+                  name="Proxy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c27bf8de-5494-4b4a-8e71-4460c60cf930"
+                  name="RealSubject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="e5397f64-4e3e-400e-94fb-894d0e6dc1d4"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d57907ec-8a26-4986-8f08-fbace8bcae20"
+        name="RealSubject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ddb5aa24-ac39-4da2-9a80-c37f09269f68">
+            <interfaceMoniker
+              Id="e57262f4-7f22-4502-b8ed-bf0620961701"
+              LastKnownName="Subject"
+              LastKnownLocation="Structural patterns.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3f072bb4-63e5-4dda-bfbe-d410fa0da3df"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
