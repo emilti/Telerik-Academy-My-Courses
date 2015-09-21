@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="37346990-bb01-4a73-b268-e6ca44611d5e" name="Mediator" linkedPackageId="c3f1fd28-0b50-4b7a-bb08-75b8216ee567" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="613ae82f-a5d5-4b66-9e54-0b5edd6b6bb3">
+      <profileInstance Id="3b306026-c83f-4fc9-b9ae-50231feada9b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7751d423-7d47-4a40-89ca-ad45d3d4cff6">
+      <profileInstance Id="713b038d-fc8e-4906-8408-9fc8f0b34717" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cb9f304c-ff1c-4bea-8666-a1b26ad9f6da" name="Colleague" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d1060dbe-aa50-4903-9fa7-f07eda658035" />
+        <targetEnds>
+          <association Id="26dc8fee-1343-427e-806d-b552d61a1acc" isDerived="false" sourceEndRoleName="Colleague" targetEndRoleName="Mediator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="cb1f312d-3830-4a3b-ad0f-98e0e9b523c9" LastKnownName="Mediator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e26428c-040c-4440-a8e9-ba161c4d45e0" name="Colleague" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="502b9b7b-8ab8-4dfc-8581-9ce849b67252" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a38b107-66e8-4974-b4f2-7cbfec7a3907" name="Mediator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d722d0e-f46c-4dc6-914c-67df1c4655c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f39107c4-2363-48cb-8a1d-8480b5de0080" />
+          </association>
+        </targetEnds>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cb1f312d-3830-4a3b-ad0f-98e0e9b523c9" name="Mediator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="52bc9109-2d9c-4fb0-907b-a38900f3cebd" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ee81249-c806-46ea-aa0e-d36c6f6d8de7" name="ConcreteMediator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="47e79a0f-da5c-40a5-ae98-c510fef3de3b" />
+        <generalsInternal>
+          <generalization Id="bc389918-c479-441a-83e9-d41d2e55d6f3" isSubstitutable="false">
+            <classMoniker Id="cb1f312d-3830-4a3b-ad0f-98e0e9b523c9" LastKnownName="Mediator" />
+            <elementDefinition Id="cd087196-9fbb-4dcd-9fe2-121c79006008" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="bda8096b-b6ac-4190-952f-3ec9487bd432" isDerived="false" sourceEndRoleName="ConcreteMediator" targetEndRoleName="ConcreteColleague" isLeaf="false" isAbstract="false">
+            <classMoniker Id="26230e0e-c263-4564-9fa6-91f0933eb362" LastKnownName="ConcreteColleague" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f7e9c51-e1e3-4c18-b5fb-1e98cb7bc22a" name="ConcreteMediator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="54035ab7-905b-4147-9965-0961ddd4bf1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04563bf8-6487-43a2-9ae0-882a9743f56c" name="ConcreteColleague" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="090b6279-08c7-4308-b50a-8b30f39f672f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="728d26c7-058a-4bd6-95df-34f6e3285add" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="26230e0e-c263-4564-9fa6-91f0933eb362" name="ConcreteColleague" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2322ebaa-b3c3-4fe7-8ef8-23a56d0f3d6d" />
+        <suppliersInternal>
+          <interfaceRealization Id="fa05e0c0-9481-4cb3-90f9-5c9bebc88d9d">
+            <interfaceMoniker Id="cb9f304c-ff1c-4bea-8666-a1b26ad9f6da" LastKnownName="Colleague" />
+            <elementDefinition Id="810b0ff1-9155-4fe6-a3d5-39c3a54b8b82" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c3f1fd28-0b50-4b7a-bb08-75b8216ee567" name="Behavioral patterns">
+    <elementDefinition Id="2d1d2e20-a2b7-41fe-8f85-397eb4221c82" />
+  </package>
+</logicalClassDesignerModel>
