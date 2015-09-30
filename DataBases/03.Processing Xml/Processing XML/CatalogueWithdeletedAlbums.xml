@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+  <album>
+    <name>Dark side of the moon</name>
+    <artist>Pink floyd</artist>
+    <producer>John Doe</producer>
+    <price>22</price>
+    <songs>
+      <song>
+        <title>Time</title>
+        <duration>6.40</duration>
+      </song>
+      <song>
+        <title>Money</title>
+        <duration>6.20</duration>
+      </song>
+      <song>
+        <title>Breathe</title>
+        <duration>2.50</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Dark side of the moon</name>
+    <artist>Pink floyd</artist>
+    <producer>John Doe</producer>
+    <price>22</price>
+    <songs>
+      <song>
+        <title>Time</title>
+        <duration>6.40</duration>
+      </song>
+      <song>
+        <title>Money</title>
+        <duration>6.20</duration>
+      </song>
+      <song>
+        <title>Breathe</title>
+        <duration>2.50</duration>
+      </song>
+    </songs>
+  </album>
+</catalogue>
