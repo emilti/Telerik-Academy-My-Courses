@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<albums>
+	<album>
+		<name>Dark side of the moon</name>
+		<author>Pink floyd</author>
+	</album>
+	<album>
+		<name>Americana</name>
+		<author>Offspring</author>
+	</album>
+	<album>
+		<name>task11Album1</name>
+		<author>Me</author>
+	</album>
+	<album>
+		<name>task11Album2</name>
+		<author>Me</author>
+	</album>
+	<album>
+		<name>The wall</name>
+		<author>Pink floyd</author>
+	</album>
+</albums>

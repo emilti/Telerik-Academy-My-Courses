@@ -35,8 +35,6 @@ namespace ProcessingXML
                                      errors = true;
                                  });
             Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");
-
-
         }
     }
 }

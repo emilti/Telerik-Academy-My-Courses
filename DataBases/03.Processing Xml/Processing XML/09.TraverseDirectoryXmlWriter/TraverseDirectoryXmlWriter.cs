@@ -13,7 +13,7 @@
         public static void Main()
         {
             // string fileName = "../../../DirTask9";
-            string resultXml = "..\\..\\..\\resultXml.xml";
+            string resultXml = "..\\..\\..\\Task9ResultXml.xml";
             Encoding encoding = Encoding.GetEncoding("windows-1251");
             XmlTextWriter writer = new XmlTextWriter(resultXml, encoding);
             using (writer)
@@ -25,7 +25,7 @@
                 DirSearch("..\\..\\..\\DirTask9", writer);
             }
 
-            Console.WriteLine("The content of ..\\..\\..\\DirTask9 is extracted to file resultXml.xml");
+            Console.WriteLine("The content of ..\\..\\..\\DirTask9 is extracted to file Task9ResultXml.xml");
         }
 
 

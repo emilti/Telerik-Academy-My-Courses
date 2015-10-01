@@ -31,7 +31,7 @@
                 rootNode.RemoveChild(album);
             }
 
-            doc.Save("../../../" + "CatalogueWithdeletedAlbums.xml");
+            doc.Save("../../../" + "Task4CatalogueWithdeletedAlbums.xml");
         }
     }
 }

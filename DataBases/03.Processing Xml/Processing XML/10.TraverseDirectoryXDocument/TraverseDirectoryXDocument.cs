@@ -18,8 +18,8 @@
 
             resultXmlXdocument.Add(DirSearch("..\\..\\..\\DirTask9"));
 
-            resultXmlXdocument.Save("../../../resultXmlFromXdocument.xml");
-            Console.WriteLine("The content of ..\\..\\..\\DirTask9 is extracted to file resultXmlXdocument.xml");
+            resultXmlXdocument.Save("../../../Task10resultXmlFromXdocument.xml");
+            Console.WriteLine("The content of ..\\..\\..\\DirTask9 is extracted to file Task10ResultXmlXdocument.xml");
         }
 
         private static XElement DirSearch(string sDir)

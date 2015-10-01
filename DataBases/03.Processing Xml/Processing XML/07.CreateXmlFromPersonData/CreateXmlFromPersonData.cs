@@ -31,8 +31,8 @@
                 )
 
         );
-            personXml.Save("../../../person.xml");
-            Console.WriteLine("Check the file Person.Xml in the main folder ProcessingXml with the projects .");
+            personXml.Save("../../../Task7person.xml");
+            Console.WriteLine("Check the file Task7Person.Xml in the main folder ProcessingXml with the projects .");
         }
     }
 }

@@ -11,7 +11,7 @@
     {
         public static void Main()
         {
-            string fileName = "../../../album.xml";    
+            string fileName = "../../../Task8Album.xml";    
             Dictionary<string, string> albums = new Dictionary<string, string>();
 
             using (XmlReader reader = XmlReader.Create("../../../Catalogue.xml"))
@@ -49,7 +49,7 @@
                 }
 
                 writer.WriteEndElement();
-                Console.WriteLine("Check the album.xml file in the main folder.");
+                Console.WriteLine("Check the Task8Album.xml file in the main folder.");
             }   
         }
 

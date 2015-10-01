@@ -13,7 +13,7 @@
         {
              XslCompiledTransform xslt = new XslCompiledTransform();
              xslt.Load("../../../CatalogueStyles.xslt");
-             xslt.Transform("../../../Catalogue.xml", "../../../catalog.html");
+             xslt.Transform("../../../Catalogue.xml", "../../../Task14Catalog.html");
         }
     }
 }
