@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5FD334A0-6ACC-4C14-8E8B-47ED6456CC38}"
 	ProjectSection(SolutionItems) = preProject
 		Catalogue.xml = Catalogue.xml
+		CatalogueStyles.xslt = CatalogueStyles.xslt
 		PersonData.txt = PersonData.txt
 	EndProjectSection
 EndProject
@@ -30,6 +31,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath", "11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath\11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath.csproj", "{CF145F74-8299-4481-871F-51CC3C85DE04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ExtractPricesForAlbumsFromEarlierThan5yLINQ", "12.ExtractPricesForAlbumsFromEarlierThan5yLINQ\12.ExtractPricesForAlbumsFromEarlierThan5yLINQ.csproj", "{27270E36-10BE-470B-ADCB-995A6C0F460B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.TransformationUsingClassXslTransform", "14.TransformationUsingClassXslTransform\14.TransformationUsingClassXslTransform.csproj", "{6EF1180B-E057-4C45-BB3F-91580E7CF214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.TransformXmlToHtmlXQuery", "15.TransformXmlToHtmlXQuery\15.TransformXmlToHtmlXQuery.csproj", "{2CBBA167-F004-40BC-83FA-C2C389D52D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.SchemaValidation", "16.SchemaValidation\16.SchemaValidation.csproj", "{34F24531-3F82-4818-9D79-F1E20FF2EDA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +88,18 @@ Global
 		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF1180B-E057-4C45-BB3F-91580E7CF214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF1180B-E057-4C45-BB3F-91580E7CF214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF1180B-E057-4C45-BB3F-91580E7CF214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF1180B-E057-4C45-BB3F-91580E7CF214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CBBA167-F004-40BC-83FA-C2C389D52D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBBA167-F004-40BC-83FA-C2C389D52D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBBA167-F004-40BC-83FA-C2C389D52D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBBA167-F004-40BC-83FA-C2C389D52D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F24531-3F82-4818-9D79-F1E20FF2EDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F24531-3F82-4818-9D79-F1E20FF2EDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F24531-3F82-4818-9D79-F1E20FF2EDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F24531-3F82-4818-9D79-F1E20FF2EDA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,11 +13,7 @@
     {
         public static void Main()
         {
-            XDocument xmlDoc = XDocument.Load("../../../Catalogue.xml");            
-            // from title in xmlDoc.Descendants("title")
-           //  select (string)title;
-
-
+            XDocument xmlDoc = XDocument.Load("../../../Catalogue.xml");  
             var prices =
             from x in xmlDoc.Descendants("album")
             where int.Parse(x.Element("year-of-release").Value) > 2010

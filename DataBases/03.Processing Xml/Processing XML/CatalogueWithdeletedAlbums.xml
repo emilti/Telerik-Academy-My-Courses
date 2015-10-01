@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="CatalogueStyles.xslt"?>
 <catalogue>
   <album>
     <name>Dark side of the moon</name>
     <artist>Pink floyd</artist>
     <producer>John Doe</producer>
     <price>22</price>
+    <year-of-release>1973</year-of-release>
     <songs>
       <song>
         <title>Time</title>
@@ -21,22 +23,19 @@
     </songs>
   </album>
   <album>
-    <name>Dark side of the moon</name>
+    <name>The wall</name>
     <artist>Pink floyd</artist>
     <producer>John Doe</producer>
-    <price>22</price>
+    <price>21</price>
+    <year-of-release>1979</year-of-release>
     <songs>
       <song>
         <title>Time</title>
         <duration>6.40</duration>
       </song>
       <song>
-        <title>Money</title>
-        <duration>6.20</duration>
-      </song>
-      <song>
-        <title>Breathe</title>
-        <duration>2.50</duration>
+        <title>Another brick in the wall</title>
+        <duration>4.20</duration>
       </song>
     </songs>
   </album>
