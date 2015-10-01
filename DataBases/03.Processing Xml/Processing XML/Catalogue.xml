@@ -5,6 +5,7 @@
     <artist>Pink floyd</artist>
     <producer>John Doe</producer>
     <price>22</price>
+    <year-of-release>1973</year-of-release>
     <songs>
       <song>
         <title>Time</title>
@@ -25,6 +26,7 @@
     <artist>Offspring</artist>
     <producer>John Doe</producer>
     <price>19</price>
+    <year-of-release>1998</year-of-release>
     <songs>
       <song>
         <title>Pretty fly for a white guy</title>
@@ -37,23 +39,34 @@
     </songs>
   </album>
   <album>
-    <name>Dark side of the moon</name>
+    <name>task11Album1</name>
+    <artist>Me</artist>
+    <producer>John Doe</producer>
+    <price>11</price>
+    <year-of-release>2012</year-of-release>
+ </album> 
+  <album>
+    <name>task11Album2</name>
+    <artist>Me</artist>
+    <producer>John Doe</producer>
+    <price>12</price>
+    <year-of-release>2011</year-of-release>
+ </album> 
+  <album>
+    <name>The wall</name>
     <artist>Pink floyd</artist>
     <producer>John Doe</producer>
-    <price>22</price>
+    <price>21</price>
+    <year-of-release>1979</year-of-release>
     <songs>
       <song>
         <title>Time</title>
         <duration>6.40</duration>
       </song>
       <song>
-        <title>Money</title>
-        <duration>6.20</duration>
-      </song>
-      <song>
-        <title>Breathe</title>
-        <duration>2.50</duration>
-      </song>
+        <title>Another brick in the wall</title>
+        <duration>4.20</duration>
+      </song>     
     </songs>
   </album>
 </catalogue>

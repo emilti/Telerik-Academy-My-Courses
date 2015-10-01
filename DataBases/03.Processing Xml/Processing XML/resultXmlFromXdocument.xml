@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<main-element>
+  <dir path="..\..\..\DirTask9">
+    <file path="..\..\..\DirTask9\album.xml">&lt;?xml version="1.0" encoding="windows-1251"?&gt;
+&lt;albums&gt;
+	&lt;album&gt;
+		&lt;name&gt;Dark side of the moon&lt;/name&gt;
+		&lt;author&gt;Pink floyd&lt;/author&gt;
+	&lt;/album&gt;
+	&lt;album&gt;
+		&lt;name&gt;Americana&lt;/name&gt;
+		&lt;author&gt;Offspring&lt;/author&gt;
+	&lt;/album&gt;
+	&lt;album&gt;
+		&lt;name&gt;The wall&lt;/name&gt;
+		&lt;author&gt;Pink floyd&lt;/author&gt;
+	&lt;/album&gt;
+&lt;/albums&gt;
+</file>
+    <file path="..\..\..\DirTask9\UpperFile.xml">&lt;content&gt;Uppper file&lt;/content&gt;
+</file>
+    <dir path="..\..\..\DirTask9\SubDir">
+      <file path="..\..\..\DirTask9\SubDir\person.txt">aaa
+</file>
+    </dir>
+  </dir>
+</main-element>
