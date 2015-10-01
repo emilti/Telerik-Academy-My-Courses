@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.TraverseDirectoryXDocume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath", "11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath\11.ExtractPricesForAlbumsFromEarlierThan5YearsXPath.csproj", "{CF145F74-8299-4481-871F-51CC3C85DE04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ExtractPricesForAlbumsFromEarlierThan5yLINQ", "12.ExtractPricesForAlbumsFromEarlierThan5yLINQ\12.ExtractPricesForAlbumsFromEarlierThan5yLINQ.csproj", "{27270E36-10BE-470B-ADCB-995A6C0F460B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{CF145F74-8299-4481-871F-51CC3C85DE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF145F74-8299-4481-871F-51CC3C85DE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF145F74-8299-4481-871F-51CC3C85DE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27270E36-10BE-470B-ADCB-995A6C0F460B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
