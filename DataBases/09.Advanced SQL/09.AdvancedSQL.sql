@@ -123,7 +123,7 @@ SELECT GETDATE() 'Today',
 CREATE TABLE Users (
   id int IDENTITY,	
   Username nvarchar(50)  NOT NULL,
-  Password nvarchar(50) NOT NULL,
+  Password nvarchar(50),
   FullName nvarchar(100) NOT NULL,
   LastLoginTime DATETIME DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT PK_USER PRIMARY KEY(id),
@@ -196,8 +196,89 @@ DELETE FROM Users WHERE id = 6
     Combine the first and last names as a full name.
     For username use the first letter of the first name + the last name (in lowercase).
     Use the same for the password, and NULL for last login time.*/
-INSERT INTO Users (Username, [Password], FullName)
+INSERT INTO Users (Username, [Password], FullName, LastLoginTime)
 SELECT LOWER(LEFT(FirstName, 3) + LastName),
 		LOWER(LEFT(FirstName, 3) + LastName),
-		FirstName + ' ' + LastName
-FROM Employees
+		FirstName + ' ' + LastName,
+		NULL
+FROM [TelerikAcademy].[dbo].[Employees]
+
+/* 23.Write a SQL statement that changes the password to NULL for all users
+ that have not been in the system since 10.03.2010.*/
+
+UPDATE Users
+SET LastLoginTime = CAST('2009-05-25' AS DATETIME)
+FROM Users
+WHERE id = 7
+
+UPDATE Users
+SET LastLoginTime = CAST('2009-10-25' AS DATETIME)
+FROM Users
+WHERE id = 8
+
+UPDATE Users
+SET [Password] = NULL
+FROM Users
+WHERE LastLoginTime < '2013-10-03'
+
+/* 24. Write a SQL statement that deletes all users without passwords (NULL password).*/
+DELETE FROM Users WHERE Password IS NULL
+
+/* 25. Write a SQL query to display the average employee salary by department and job title.*/
+SELECT d.DepartmentId, e.Name, d.JobTitle, AVG(SALARY) AS AverageSalary
+FROM [TelerikAcademy].[dbo].[Employees] d, [TelerikAcademy].[dbo].[Departments] e
+WHERE d.DepartmentId = e.DepartmentId
+GROUP BY e.Name, d.DepartmentId, d.JobTitle 
+ORDER By d.DepartmentId
+
+/*UNSOLVED*/
+/*UNSOLVED*/
+/*UNSOLVED*/
+/* 26. Write a SQL query to display the minimal employee salary by department and job title 
+along with the name of some of the employees that take it.*/
+SELECT d.DepartmentId, e.Name, d.JobTitle, d.FirstName, d.LastName,
+d.Salary
+FROM [TelerikAcademy].[dbo].[Employees] d
+INNER JOIN [TelerikAcademy].[dbo].[Departments] e
+	on d.DepartmentId = e.DepartmentId
+GROUP BY e.Name, d.DepartmentId, d.JobTitle, d.Salary, d.FirstName, d.LastName
+HAVING d.Salary = Min(d.Salary)
+ORDER BY d.DepartmentId
+
+
+/* 27.Write a SQL query to display the town where maximal number of employees work.*/
+SELECT TOP 1 h.Name, COUNT(m.EmployeeId) as MaxCount
+FROM Employees m
+INNER JOIN Addresses g 
+    ON m.AddressID = g.AddressID
+INNER JOIN Towns h 
+    ON g.TownID = h.TownID
+GROUP BY h.Name
+
+/* 28.Write a SQL query to display the number of managers from each town.*/
+SELECT h.Name, COUNT(n.EmployeeId)
+FROM Employees m
+INNER JOIN Addresses g 
+    ON m.AddressID = g.AddressID
+INNER JOIN Towns h 
+    ON g.TownID = h.TownID
+INNER JOIN Employees n 
+    ON m.EmployeeId = n.ManagerId
+GROUP BY h.Name
+
+/* 29. Write a SQL to create table WorkHours to store work reports for each employee 
+(employee id, date, task, hours, comments).
+Don't forget to define identity, primary key and appropriate foreign key.
+Issue few SQL statements to insert, update and delete of some data in the table.
+Define a table WorkHoursLogs to track all changes in the WorkHours table with triggers.
+For each change keep the old record data, the new record data and the command (insert / update / delete).*/
+CREATE TABLE WorkHours (
+  EmployeeId int IDENTITY,	
+  Date DATETIME DEFAULT CURRENT_TIMESTAMP, 
+  Task navchar(50), 
+  Hours int, 
+  Comments navchar(50),
+  CONSTRAINT PK_Group PRIMARY KEY(GroupId),
+  CONSTRAINT Unique_Group_Name UNIQUE(Name)   
+)
+GO
