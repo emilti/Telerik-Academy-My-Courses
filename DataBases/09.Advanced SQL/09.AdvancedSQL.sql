@@ -231,18 +231,14 @@ WHERE d.DepartmentId = e.DepartmentId
 GROUP BY e.Name, d.DepartmentId, d.JobTitle 
 ORDER By d.DepartmentId
 
-/*UNSOLVED*/
-/*UNSOLVED*/
-/*UNSOLVED*/
 /* 26. Write a SQL query to display the minimal employee salary by department and job title 
 along with the name of some of the employees that take it.*/
-SELECT d.DepartmentId, e.Name, d.JobTitle, d.FirstName, d.LastName,
-d.Salary
+SELECT d.DepartmentId, e.Name, d.JobTitle, MIN(d.FirstName),
+MIN(d.Salary)
 FROM [TelerikAcademy].[dbo].[Employees] d
 INNER JOIN [TelerikAcademy].[dbo].[Departments] e
 	on d.DepartmentId = e.DepartmentId
-GROUP BY e.Name, d.DepartmentId, d.JobTitle, d.Salary, d.FirstName, d.LastName
-HAVING d.Salary = Min(d.Salary)
+GROUP BY e.Name, d.DepartmentId, d.JobTitle
 ORDER BY d.DepartmentId
 
 
