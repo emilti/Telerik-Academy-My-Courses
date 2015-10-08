@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RetrieveDataFromSQL", "01.RetrieveDataFromSQL\01.RetrieveDataFromSQL.csproj", "{CEB55703-C4BB-424F-886D-717F0EB99D72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.AddingDataToSQL", "04.AddingDataToSQL\04.AddingDataToSQL.csproj", "{31442120-D09C-464E-9C0D-BA077A9C8061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB55703-C4BB-424F-886D-717F0EB99D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB55703-C4BB-424F-886D-717F0EB99D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB55703-C4BB-424F-886D-717F0EB99D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB55703-C4BB-424F-886D-717F0EB99D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31442120-D09C-464E-9C0D-BA077A9C8061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31442120-D09C-464E-9C0D-BA077A9C8061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31442120-D09C-464E-9C0D-BA077A9C8061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31442120-D09C-464E-9C0D-BA077A9C8061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
