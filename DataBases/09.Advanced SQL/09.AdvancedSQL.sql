@@ -252,14 +252,13 @@ INNER JOIN Towns h
 GROUP BY h.Name
 
 /* 28.Write a SQL query to display the number of managers from each town.*/
-SELECT h.Name, COUNT(n.EmployeeId)
+SELECT h.Name, COUNT(m.EmployeeID)
 FROM Employees m
 INNER JOIN Addresses g 
     ON m.AddressID = g.AddressID
 INNER JOIN Towns h 
     ON g.TownID = h.TownID
-INNER JOIN Employees n 
-    ON m.EmployeeId = n.ManagerId
+	WHERE m.EmployeeID IN(SELECT ManagerID FROM Employees)
 GROUP BY h.Name
 
 /* 29. Write a SQL to create table WorkHours to store work reports for each employee 
@@ -271,10 +270,118 @@ For each change keep the old record data, the new record data and the command (i
 CREATE TABLE WorkHours (
   EmployeeId int IDENTITY,	
   Date DATETIME DEFAULT CURRENT_TIMESTAMP, 
-  Task navchar(50), 
+  Task nchar(50), 
   Hours int, 
-  Comments navchar(50),
-  CONSTRAINT PK_Group PRIMARY KEY(GroupId),
-  CONSTRAINT Unique_Group_Name UNIQUE(Name)   
+  Comments nchar(50),
+  CONSTRAINT PK_WorkHours PRIMARY KEY(EmployeeId)  
 )
 GO
+
+CREATE TABLE WorkHoursLogs(
+ChangeId int IDENTITY,
+ChangeDate DATETIME, 
+ChangeTask nchar(50),
+ChangeHours int,
+ChangeComments nchar(50),
+ActionChange varchar(10),
+CONSTRAINT PK_Trigger PRIMARY KEY(ChangeId),  	
+)
+GO
+
+CREATE TRIGGER Tr_WorkHoursLogsInsert ON WorkHours FOR INSERT
+ AS
+DECLARE @action char(10)
+SET @action = 'INSERT'
+INSERT INTO WorkHoursLogs (ChangeDate, ChangeTask, ChangeHours, ChangeComments, ActionChange)
+SELECT  Date, Task, Hours, Comments, @action
+  FROM INSERTED
+GO
+
+CREATE TRIGGER Tr_WorkHoursLogsUpdate ON WorkHours FOR UPDATE
+ AS
+DECLARE @action char(10)
+SET @action = 'UPDATE'
+INSERT INTO WorkHoursLogs (ChangeDate, ChangeTask, ChangeHours, ChangeComments, ActionChange)
+SELECT  Date, Task, Hours, Comments, @action
+  FROM inserted
+GO
+
+CREATE TRIGGER Tr_WorkHoursLogsDelete ON WorkHours FOR DELETE
+ AS
+DECLARE @action char(10)
+SET @action = 'DELETE'
+INSERT INTO WorkHoursLogs (ChangeDate, ChangeTask, ChangeHours, ChangeComments, ActionChange)
+SELECT  Date, Task, Hours, Comments, @action
+  FROM DELETED
+GO
+
+INSERT WorkHours VALUES ('10/10/2010','aaaaaaa',  12, 'comment')
+INSERT WorkHours VALUES ('10/12/2010','bbbbb',  2, 'bez comment')
+INSERT WorkHours VALUES ('10/12/2010','ccccc',  2, 'comment')
+
+UPDATE WorkHours
+SET Comments = 'update comment'
+FROM WorkHours
+WHERE EmployeeId = 2
+
+DELETE FROM WorkHours WHERE EmployeeId = 3
+
+/* 30 Start a database transaction, delete all employees from the 'Sales' department along 
+with all dependent records from the pother tables.
+    At the end rollback the transaction.*/
+begin transaction
+ALTER TABLE Departments
+	DROP CONSTRAINT FK_Departments_Employees
+DELETE FROM Employees WHERE EmployeeId in (SELECT m.EmployeeID
+FROM	Employees m
+INNER JOIN Departments n 
+    ON m.DepartmentID = n.DepartmentID 
+	Where n.Name = 'Sales')
+rollback transaction
+select * from Employees
+
+/* 31. Start a database transaction and drop the table EmployeesProjects.
+    Now how you could restore back the lost table data?*/
+begin transaction
+DROP TABLE [TelerikAcademy].[dbo].[EmployeesProjects]
+ROLLBACK transaction
+
+/* 32. Find how to use temporary tables in SQL Server.
+Using temporary tables backup all records from EmployeesProjects 
+and restore them back after dropping and re-creating the table.*/
+CREATE TABLE #TempEmployesProject(
+UserID int,
+ProjectID int)
+Go
+
+INSERT INTO #TempEmployesProject (UserID, ProjectID)
+SELECT EmployeeID, ProjectID
+FROM EmployeesProjects
+Go
+
+SELECT *
+FROM EmployeesProjects
+
+SELECT *
+FROM #TempEmployesProject
+
+
+DROP TABLE [TelerikAcademy].[dbo].[EmployeesProjects]
+
+
+CREATE TABLE EmployeesProjects (
+	EmployeeId INT,
+	ProjectId INT,
+	CONSTRAINT PK_EmployeesProjects PRIMARY KEY(EmployeeID, ProjectID),
+	CONSTRAINT FK_EmployeesProjects_Employees FOREIGN KEY(EmployeeID) 
+	REFERENCES Employees(EmployeeID),
+	CONSTRAINT FK_EmployeesProjects_Projects FOREIGN KEY(ProjectID) 
+	REFERENCES Projects(ProjectID)
+)
+
+INSERT INTO EmployeesProjects
+SELECT UserID, ProjectId
+FROM #TempEmployesProject
+
+
+
