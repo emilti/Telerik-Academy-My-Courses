@@ -9,11 +9,13 @@
     
     public class AddingDataToSQL
     {
+        public const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        public const string SQLInsertCommand = "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
+           "VALUES (@ProductName, @SupplierID, @CategoryID, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel, @Discontinued)";
         public static void Main()
         {
             SqlConnection dbCon =
-               new SqlConnection("Data Source=localhost; Integrated Security=SSPI;" +
-                                           "Initial Catalog=North");
+               new SqlConnection(ConnectionString);
             dbCon.Open();
             using (dbCon)
             {
@@ -27,9 +29,7 @@
             int unitsOnOrder, int reorderLevel,
             int discontinued, SqlConnection dbCon)
         {
-            SqlCommand commandInsertRow = new SqlCommand(
-           "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
-           "VALUES (@ProductName, @SupplierID, @CategoryID, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel, @Discontinued)", dbCon);
+            SqlCommand commandInsertRow = new SqlCommand(SQLInsertCommand, dbCon);
             commandInsertRow.Parameters.AddWithValue("@ProductName", productName);
             commandInsertRow.Parameters.AddWithValue("@SupplierID", supplierID);
             commandInsertRow.Parameters.AddWithValue("@CategoryID", categoryID);
