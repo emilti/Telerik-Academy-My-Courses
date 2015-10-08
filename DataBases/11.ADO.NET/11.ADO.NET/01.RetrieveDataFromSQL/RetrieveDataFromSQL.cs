@@ -9,18 +9,18 @@
 
     public class RetrieveDataFromSQL
     {
-        public const string ConnectionString= "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
-        public const string SQLCommandForCount = "SELECT COUNT(*) FROM Categories";
-        public const string CategoriesCount = "Categories count: {0} ";
-        public const string SQLCommandGetCategoryAndDescriptiom = "SELECT CategoryName, Description FROM Categories";
-        public const string SQLCommandCategoryProduct = "SELECT m.CategoryName, n.ProductName from Products n INNER JOIN Categories m on m.CategoryID = n.CategoryID ORDER BY m.CategoryID";
-        public const string FormatResult = "{0} - {1}";
-        public const string Task1 = "Task 1:";
-        public const string Task2 = "Task 2:";
-        public const string Task3 = "Task 3:";
-        public const string CategoryName = "CategoryName";
-        public const string Description = "Description";
-        public const string ProductName = "ProductName";
+        const string ConnectionString= "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        const string SQLCommandForCount = "SELECT COUNT(*) FROM Categories";
+        const string CategoriesCount = "Categories count: {0} ";
+        const string SQLCommandGetCategoryAndDescriptiom = "SELECT CategoryName, Description FROM Categories";
+        const string SQLCommandCategoryProduct = "SELECT m.CategoryName, n.ProductName from Products n INNER JOIN Categories m on m.CategoryID = n.CategoryID ORDER BY m.CategoryID";
+        const string FormatResult = "{0} - {1}";
+        const string Task1 = "Task 1:";
+        const string Task2 = "Task 2:";
+        const string Task3 = "Task 3:";
+        const string CategoryName = "CategoryName";
+        const string Description = "Description";
+        const string ProductName = "ProductName";
         static void Main()
         {
             SqlConnection dbCon =

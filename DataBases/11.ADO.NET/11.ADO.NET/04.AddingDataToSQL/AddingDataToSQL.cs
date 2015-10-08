@@ -9,8 +9,8 @@
     
     public class AddingDataToSQL
     {
-        public const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
-        public const string SQLInsertCommand = "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
+        const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        const string SQLInsertCommand = "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
            "VALUES (@ProductName, @SupplierID, @CategoryID, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel, @Discontinued)";
         public static void Main()
         {
