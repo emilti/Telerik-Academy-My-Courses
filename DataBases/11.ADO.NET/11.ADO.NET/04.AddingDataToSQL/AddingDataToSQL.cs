@@ -9,9 +9,10 @@
     
     public class AddingDataToSQL
     {
-        const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
-        const string SQLInsertCommand = "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
+        private const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        private const string SQLInsertCommand = "INSERT INTO Products(ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued ) " +
            "VALUES (@ProductName, @SupplierID, @CategoryID, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel, @Discontinued)";
+
         public static void Main()
         {
             SqlConnection dbCon =
@@ -23,11 +24,17 @@
             }
         }
 
-        public static void AddRowToProducts(string productName, int supplierID, 
-            int categoryID, int quantityPerUnit, 
-            int unitPrice, int  unitsInStock,   
-            int unitsOnOrder, int reorderLevel,
-            int discontinued, SqlConnection dbCon)
+        public static void AddRowToProducts(
+            string productName, 
+            int supplierID, 
+            int categoryID,
+            int quantityPerUnit, 
+            int unitPrice, 
+            int unitsInStock,   
+            int unitsOnOrder, 
+            int reorderLevel,
+            int discontinued,
+            SqlConnection dbCon)
         {
             SqlCommand commandInsertRow = new SqlCommand(SQLInsertCommand, dbCon);
             commandInsertRow.Parameters.AddWithValue("@ProductName", productName);
@@ -40,7 +47,6 @@
             commandInsertRow.Parameters.AddWithValue("@ReorderLevel", reorderLevel);
             commandInsertRow.Parameters.AddWithValue("@Discontinued", discontinued);
             commandInsertRow.ExecuteNonQuery();
-        }
-          
+        }          
     }
 }

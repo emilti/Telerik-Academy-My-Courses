@@ -12,19 +12,18 @@
 
     public class RetrieveImagesFromSQL
     {
-        const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
-        const string SQLExtractPictureData = "SELECT Picture FROM Categories";
-        const string FileExtension = ".jpg";
-        const string Picture = "Picture";
-        static void Main()
-        {
+        private const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        private const string SQLExtractPictureData = "SELECT Picture FROM Categories";
+        private const string FileExtension = ".jpg";
+        private const string Picture = "Picture";
 
+        public static void Main()
+        {
             SqlConnection dbConn = new SqlConnection(
-           ConnectionString);
+            ConnectionString);
             dbConn.Open();
             using (dbConn)
             {
-
                 MemoryStream stream = new MemoryStream();
                 SqlCommand cmd = new SqlCommand(SQLExtractPictureData, dbConn);              
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -38,20 +37,20 @@
                         i++;
                         string finalFilename = filename + i;
                         imageFromDB = (byte[])reader[Picture];
-                        SaveImageToJPG(imageFromDB, finalFilename);
-                       
+                        SaveImageToJPG(imageFromDB, finalFilename);                       
                     }
                 }
-
             }
         }
 
         private static void SaveImageToJPG(byte[] imageFromDB, string filename)
         {
-            const int oleMetaPictStartPosition = 78;
+            const int OleMetaPictStartPosition = 78;
             var memoryStream =
-                new MemoryStream(imageFromDB, oleMetaPictStartPosition,
-                    imageFromDB.Length - oleMetaPictStartPosition);
+                new MemoryStream(
+                    imageFromDB, 
+                    OleMetaPictStartPosition,
+                    imageFromDB.Length - OleMetaPictStartPosition);
             using (memoryStream)
             {
                 using (var image = Image.FromStream(memoryStream, true, true))

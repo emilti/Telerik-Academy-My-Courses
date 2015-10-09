@@ -9,19 +9,20 @@
 
     public class RetrieveDataFromSQL
     {
-        const string ConnectionString= "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
-        const string SQLCommandForCount = "SELECT COUNT(*) FROM Categories";
-        const string CategoriesCount = "Categories count: {0} ";
-        const string SQLCommandGetCategoryAndDescriptiom = "SELECT CategoryName, Description FROM Categories";
-        const string SQLCommandCategoryProduct = "SELECT m.CategoryName, n.ProductName from Products n INNER JOIN Categories m on m.CategoryID = n.CategoryID ORDER BY m.CategoryID";
-        const string FormatResult = "{0} - {1}";
-        const string Task1 = "Task 1:";
-        const string Task2 = "Task 2:";
-        const string Task3 = "Task 3:";
-        const string CategoryName = "CategoryName";
-        const string Description = "Description";
-        const string ProductName = "ProductName";
-        static void Main()
+        private const string ConnectionString = "Data Source=localhost; Integrated Security=SSPI; Initial Catalog=North";
+        private const string SQLCommandForCount = "SELECT COUNT(*) FROM Categories";
+        private const string CategoriesCount = "Categories count: {0} ";
+        private const string SQLCommandGetCategoryAndDescriptiom = "SELECT CategoryName, Description FROM Categories";
+        private const string SQLCommandCategoryProduct = "SELECT m.CategoryName, n.ProductName from Products n INNER JOIN Categories m on m.CategoryID = n.CategoryID ORDER BY m.CategoryID";
+        private const string FormatResult = "{0} - {1}";
+        private const string Task1 = "Task 1:";
+        private const string Task2 = "Task 2:";
+        private const string Task3 = "Task 3:";
+        private const string CategoryName = "CategoryName";
+        private const string Description = "Description";
+        private const string ProductName = "ProductName";
+
+        public static void Main()
         {
             SqlConnection dbCon =
                 new SqlConnection(ConnectionString);
@@ -41,7 +42,7 @@
             int categoriesCount = (int)commandCategoriesCount.ExecuteScalar();
             Console.WriteLine(Task1);
             Console.WriteLine(CategoriesCount, categoriesCount);
-            Console.WriteLine("");
+            Console.WriteLine(string.Empty);
         }
 
         private static void GetCategoriesNameAndDesription(SqlConnection dbCon)
@@ -59,7 +60,7 @@
                     Console.WriteLine(FormatResult, categoryName, description);
                 }
 
-                Console.WriteLine("");
+                Console.WriteLine(string.Empty);
             }        
         }
 
@@ -78,7 +79,7 @@
                     Console.WriteLine(FormatResult, categoryName, productName);
                 }
 
-                Console.WriteLine("");
+                Console.WriteLine(string.Empty);
             }
         }       
     }
