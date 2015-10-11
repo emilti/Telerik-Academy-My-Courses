@@ -17,7 +17,7 @@
         private CarsController controller;
 
         public CarsControllerTests()
-            : this(new JustMockCarsRepository())
+            : this(new MoqCarsRepository())
         {
         }
 
@@ -97,7 +97,7 @@
         }
 
         [TestMethod]
-        public void SortingCarsByModelShouldReturnSortedListByModel()
+        public void SortingCarsByMakeShouldReturnSortedListByMake()
         {
             var cars = (IList<Car>)this.GetModel(() => this.controller.Sort("make"));           
 
@@ -110,6 +110,67 @@
             Assert.AreEqual("Opel", cars[3].Make);
         }
 
+        [TestMethod]
+        public void SortingCarsByYearShouldReturnSortedListByYear()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Sort("year"));
+
+            Assert.IsNotNull(cars);
+            Assert.AreEqual(4, cars.Count);
+            
+            Assert.AreEqual(2010, cars[0].Year);
+            Assert.AreEqual(2008, cars[1].Year);
+            Assert.AreEqual(2007, cars[2].Year);
+            Assert.AreEqual(2005, cars[3].Year);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SortingCarsByMakeShouldThrowErrorWhenInvalidArgumentIsPassed()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Sort("invalid"));            
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SortingCarsByMakeShouldThrowErrorWhenNoArgumentIsPassed()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Sort(""));
+        }        
+
+        [TestMethod]       
+        public void SearchCarsForBMWMakeShouldReturnCorrectResult()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Search("BMW"));
+            Assert.AreEqual(2, cars.Count);
+            Assert.AreEqual("BMW", cars[0].Make);
+            Assert.AreEqual("BMW", cars[1].Make);
+        }
+
+        public void SearchCarsForA4ModelShouldReturnCorrectResult()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Search("A4"));
+            Assert.AreEqual(1, cars.Count);
+            Assert.AreEqual("A4", cars[0].Model);           
+        }       
+
+        [TestMethod]
+        public void SearchCarsWithEmptyStringShouldReturnNothing()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Search(""));
+            Assert.AreEqual(0, cars.Count);           
+        }
+
+        [TestMethod]
+        public void DetailForvalidCarShouldWorkCOrrectly()
+        {
+            var detailsForCar = (Car)this.GetModel(() => this.controller.Details(1));
+
+            Assert.AreEqual(1, detailsForCar.Id);
+            Assert.AreEqual("Audi", detailsForCar.Make);
+            Assert.AreEqual(2005, detailsForCar.Year);
+        }       
+       
         private object GetModel(Func<IView> funcView)
         {
             var view = funcView();
