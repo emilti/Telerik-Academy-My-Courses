@@ -136,7 +136,21 @@
         public void SortingCarsByMakeShouldThrowErrorWhenNoArgumentIsPassed()
         {
             var cars = (IList<Car>)this.GetModel(() => this.controller.Sort(""));
-        }        
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SortingCarsByYearShouldThrowErrorWhenInvalidArgumentIsPassed()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Sort("invalid"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SortingCarsByYearShouldThrowErrorWhenNoArgumentIsPassed()
+        {
+            var cars = (IList<Car>)this.GetModel(() => this.controller.Sort(""));
+        }  
 
         [TestMethod]       
         public void SearchCarsForBMWMakeShouldReturnCorrectResult()
