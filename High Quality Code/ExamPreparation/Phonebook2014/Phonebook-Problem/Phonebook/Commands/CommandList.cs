@@ -12,11 +12,11 @@
         {         
         }
 
-        public override void Execute(string[] strings)
+        public override void Execute(string[] inputData)
         {
             try
             {
-                IEnumerable<PersonRecord> entries = this.PhonebookRepository.ListEntries(int.Parse(strings[0]), int.Parse(strings[1]));
+                IEnumerable<PersonRecord> entries = this.PhonebookRepository.ListEntries(int.Parse(inputData[0]), int.Parse(inputData[1]));
                 foreach (var entry in entries)
                 {
                     Printer.Print(entry.ToString());

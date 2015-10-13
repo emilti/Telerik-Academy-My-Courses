@@ -16,8 +16,7 @@
                       where e.Name.ToLowerInvariant() == name.ToLowerInvariant()
                       select e;
 
-            bool isInPhonebook;
-            Console.WriteLine(old);
+            bool isInPhonebook;          
             if (old.Count() == 0)
             {
                 PersonRecord personRecord = new PersonRecord();
@@ -50,17 +49,17 @@
             return isInPhonebook;
         }
 
-        public int ChangePhone(string oldent, string newent)
+        public int ChangePhone(string oldNumber, string newNumber)
         {
             var list = from e in this.records
-                       where e.PhoneNumbers.Contains(oldent)
+                       where e.PhoneNumbers.Contains(oldNumber)
                        select e;
             int nums = 0;
 
             foreach (var entry in list)
             {
-                entry.PhoneNumbers.Remove(oldent);
-                entry.PhoneNumbers.Add(newent);
+                entry.PhoneNumbers.Remove(oldNumber);
+                entry.PhoneNumbers.Add(newNumber);
                 nums++;
             }
 
@@ -83,6 +82,31 @@
             }
 
             return ent;
+        }
+
+        public bool RemovePhone(string name, string numberForRemoving)
+        {
+            var list = from e in this.records
+                       where e.PhoneNumbers.Contains(numberForRemoving)
+                       select e;
+
+            var personInPhonebook = from e in this.records
+                      where e.Name.ToLowerInvariant() == name.ToLowerInvariant()
+                      select e;
+            bool isInPhonebook = false;
+            if (personInPhonebook.Count() == 0)
+            {
+                return isInPhonebook; 
+            }
+            else
+            {
+                foreach (var entry in list)
+                {
+                    entry.PhoneNumbers.Remove(numberForRemoving);   
+                }
+
+                return isInPhonebook = true;
+            }
         }
     }
 }

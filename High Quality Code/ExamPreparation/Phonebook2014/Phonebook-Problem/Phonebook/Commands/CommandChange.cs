@@ -9,11 +9,11 @@
         {         
         }
 
-        public override void Execute(string[] strings)
+        public override void Execute(string[] inputData)
         {
             int convertedPhone = this.PhonebookRepository.ChangePhone(
-                Converter.ConvertPhoneNumber(strings[0]), 
-                Converter.ConvertPhoneNumber(strings[1]));
+                Converter.ConvertPhoneNumber(inputData[0]), 
+                Converter.ConvertPhoneNumber(inputData[1]));
             Printer.Print(string.Empty + convertedPhone + " numbers changed");
         }
     }

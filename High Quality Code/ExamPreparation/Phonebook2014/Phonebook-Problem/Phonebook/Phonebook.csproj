@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandRemove.cs" />
     <Compile Include="PersonRecord.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandAdd.cs" />
@@ -57,7 +58,7 @@
     <Compile Include="Print\Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="REP.cs" />
-    <Compile Include="REPNew.cs" />
+    <Compile Include="PhonebookRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

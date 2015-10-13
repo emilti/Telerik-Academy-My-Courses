@@ -65,5 +65,10 @@
 
             return list;
         }
+
+        public bool RemovePhone(string name, string phoneForRemoving)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

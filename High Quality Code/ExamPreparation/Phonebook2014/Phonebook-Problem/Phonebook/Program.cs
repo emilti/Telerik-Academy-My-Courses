@@ -26,6 +26,7 @@
             ICommand add = new CommandAdd(convertPhoneNumber, phonebookRepository, printer);
             ICommand change = new CommandChange(convertPhoneNumber, phonebookRepository, printer);
             ICommand list = new CommandList(convertPhoneNumber, phonebookRepository, printer);
+            ICommand remove = new CommandRemove(convertPhoneNumber, phonebookRepository, printer);
             while (true)
             {
                 string data = Console.ReadLine();
@@ -42,7 +43,7 @@
                     Environment.Exit(0);
                 }
 
-                string k = data.Substring(0, i);
+                string commandInput = data.Substring(0, i);
                 if (!data.EndsWith(")"))
                 {
                     Main();
@@ -51,23 +52,27 @@
                 string s = data.Substring(
                     i + 1,
                     data.Length - i - 2);
-                string[] strings = s.Split(',');
-                for (int j = 0; j < strings.Length; j++)
+                string[] commandData = s.Split(',');
+                for (int j = 0; j < commandData.Length; j++)
                 {
-                    strings[j] = strings[j].Trim();
+                    commandData[j] = commandData[j].Trim();
                 }
 
-                if (k.StartsWith("AddPhone") && (strings.Length >= 2))
+                if (commandInput.StartsWith("AddPhone") && (commandData.Length >= 2))
                 {
-                    add.Execute(strings);
+                    add.Execute(commandData);
                 }
-                else if (k.StartsWith("ChangePhone") && (strings.Length == 2))
+                else if (commandInput.StartsWith("ChangePhone") && (commandData.Length == 2))
                 {
-                    change.Execute(strings);
+                    change.Execute(commandData);
                 }
-                else if ((k == "List") && (strings.Length == 2))
+                else if (commandInput.StartsWith("RemovePhone") && (commandData.Length == 2))
+                {
+                    remove.Execute(commandData);
+                }
+                else if ((commandInput == "List") && (commandData.Length == 2))
                 {                    
-                    list.Execute(strings);
+                    list.Execute(commandData);
                 }
                 else
                 {

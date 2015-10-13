@@ -11,16 +11,16 @@
         {         
         }
        
-        public override void Execute(string[] strings)
+        public override void Execute(string[] inputData)
         {
-            string str0 = strings[0];
-            var str1 = strings.Skip(1).ToList();
-            for (int i = 0; i < str1.Count; i++)
+            string name = inputData[0];
+            var phoneNumbers = inputData.Skip(1).ToList();
+            for (int i = 0; i < phoneNumbers.Count; i++)
             {
-                str1[i] = this.Converter.ConvertPhoneNumber(str1[i]);
+                phoneNumbers[i] = this.Converter.ConvertPhoneNumber(phoneNumbers[i]);
             }
 
-            bool isInPhonebook = PhonebookRepository.AddPhone(str0, str1);
+            bool isInPhonebook = PhonebookRepository.AddPhone(name, phoneNumbers);
             if (isInPhonebook)
             {
                 Printer.Print("Phone entry merged"); 
