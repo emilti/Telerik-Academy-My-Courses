@@ -5,41 +5,41 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
-    public class REPNew : IPhonebookRepository
-    {
-        private List<Class1> entries = new List<Class1>();
-
+    
+    public class PhonebookRepository : IPhonebookRepository
+    {       
+        private List<PersonRecord> records = new List<PersonRecord>();
+        
         public bool AddPhone(string name, IEnumerable<string> nums)
         {
-            var old = from e in this.entries
+            var old = from e in this.records
                       where e.Name.ToLowerInvariant() == name.ToLowerInvariant()
                       select e;
 
-            bool flag;
+            bool isInPhonebook;
+            Console.WriteLine(old);
             if (old.Count() == 0)
             {
-                Class1 obj = new Class1();
-                obj.Name = name;
-                obj.Strings = new SortedSet<string>();
+                PersonRecord personRecord = new PersonRecord();
+                personRecord.Name = name;   
 
                 foreach (var num in nums)
                 {
-                    obj.Strings.Add(num);
+                    personRecord.PhoneNumbers.Add(num);
                 }
 
-                this.entries.Add(obj);
-                flag = true;
+                this.records.Add(personRecord);
+                isInPhonebook = false;
             }
             else if (old.Count() == 1)
             {
-                Class1 obj2 = old.First();
+                PersonRecord existingPersonRecord = old.First();
                 foreach (var num in nums)
                 {
-                    obj2.Strings.Add(num);
+                    existingPersonRecord.PhoneNumbers.Add(num);
                 }
 
-                flag = false;
+                isInPhonebook = true;
             }
             else
             {
@@ -47,38 +47,38 @@
                 return false;
             }
 
-            return flag;
+            return isInPhonebook;
         }
 
         public int ChangePhone(string oldent, string newent)
         {
-            var list = from e in this.entries
-                       where e.Strings.Contains(oldent)
+            var list = from e in this.records
+                       where e.PhoneNumbers.Contains(oldent)
                        select e;
             int nums = 0;
 
             foreach (var entry in list)
             {
-                entry.Strings.Remove(oldent);
-                entry.Strings.Add(newent);
+                entry.PhoneNumbers.Remove(oldent);
+                entry.PhoneNumbers.Add(newent);
                 nums++;
             }
 
             return nums;
         }
 
-        public Class1[] ListEntries(int start, int num)
+        public PersonRecord[] ListEntries(int start, int num)
         {
-            if (start < 0 || start + num > this.entries.Count)
+            if (start < 0 || start + num > this.records.Count)
             {
                 throw new ArgumentOutOfRangeException("Invalid start index or count.");
             }
 
-            this.entries.Sort();
-            Class1[] ent = new Class1[num];
+            this.records.Sort();
+            PersonRecord[] ent = new PersonRecord[num];
             for (int i = start; i <= start + num - 1; i++)
             {
-                Class1 entry = this.entries[i];
+                PersonRecord entry = this.records[i];
                 ent[i - start] = entry;
             }
 

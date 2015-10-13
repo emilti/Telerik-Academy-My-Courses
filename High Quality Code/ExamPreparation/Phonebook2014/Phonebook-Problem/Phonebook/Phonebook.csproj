@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="PersonRecord.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandAdd.cs" />
     <Compile Include="Commands\CommandChange.cs" />

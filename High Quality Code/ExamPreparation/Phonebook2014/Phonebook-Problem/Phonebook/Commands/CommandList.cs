@@ -16,7 +16,7 @@
         {
             try
             {
-                IEnumerable<Class1> entries = this.PhonebookRepository.ListEntries(int.Parse(strings[0]), int.Parse(strings[1]));
+                IEnumerable<PersonRecord> entries = this.PhonebookRepository.ListEntries(int.Parse(strings[0]), int.Parse(strings[1]));
                 foreach (var entry in entries)
                 {
                     Printer.Print(entry.ToString());

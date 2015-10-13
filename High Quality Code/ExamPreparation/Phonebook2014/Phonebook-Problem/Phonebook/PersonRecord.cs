@@ -4,10 +4,17 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class Class1 : IComparable<Class1>
-    {
-        public SortedSet<string> Strings;
-        private string name; private string name2;
+    public class PersonRecord : IComparable<PersonRecord>
+    {        
+        private string name; 
+        private string name2;
+
+        public PersonRecord()
+        {
+            this.PhoneNumbers = new SortedSet<string>();
+        }
+
+        public SortedSet<string> PhoneNumbers { get; set; }
 
         public string Name
         {
@@ -30,7 +37,7 @@
             sb.Append('[');
             sb.Append(this.Name);
             bool flag = true;
-            foreach (var phone in this.Strings)
+            foreach (var phone in this.PhoneNumbers)
             {
                 if (flag)
                 {
@@ -49,7 +56,7 @@
             return sb.ToString();
         }
 
-        public int CompareTo(Class1 other)
+        public int CompareTo(PersonRecord other)
         {
             return this.name2.CompareTo(other.name2);
         }

@@ -9,6 +9,6 @@
 
         int ChangePhone(string oldPhoneNumber, string newPhoneNumber);
 
-        Class1[] ListEntries(int startIndex, int count);
+        PersonRecord[] ListEntries(int startIndex, int count);
     }
 }

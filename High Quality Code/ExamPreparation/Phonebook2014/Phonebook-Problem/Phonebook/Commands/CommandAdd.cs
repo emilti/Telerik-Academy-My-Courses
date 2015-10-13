@@ -20,14 +20,14 @@
                 str1[i] = this.Converter.ConvertPhoneNumber(str1[i]);
             }
 
-            bool flag = PhonebookRepository.AddPhone(str0, str1);
-            if (flag)
+            bool isInPhonebook = PhonebookRepository.AddPhone(str0, str1);
+            if (isInPhonebook)
             {
-                 Printer.Print("Phone entry created");
+                Printer.Print("Phone entry merged"); 
             }
             else
             {
-                Printer.Print("Phone entry merged");
+                Printer.Print("Phone entry created");                
             }
         }
     }

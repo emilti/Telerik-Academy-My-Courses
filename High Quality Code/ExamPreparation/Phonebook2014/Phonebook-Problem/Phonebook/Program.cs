@@ -20,7 +20,7 @@
     { 
         public static void Main()
         {
-            IPhonebookRepository phonebookRepository = new REPNew();
+            IPhonebookRepository phonebookRepository = new PhonebookRepository();
             IConvertable convertPhoneNumber = new Converter();
             IPrintable printer = new Printer();
             ICommand add = new CommandAdd(convertPhoneNumber, phonebookRepository, printer);

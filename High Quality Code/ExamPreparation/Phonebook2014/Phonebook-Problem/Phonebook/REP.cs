@@ -7,20 +7,20 @@
 
     public class REP : IPhonebookRepository
     {
-        private OrderedSet<Class1> sorted = new OrderedSet<Class1>();
-        private Dictionary<string, Class1> dict = new Dictionary<string, Class1>();
-        private MultiDictionary<string, Class1> multidict = new MultiDictionary<string, Class1>(false);
+        private OrderedSet<PersonRecord> sorted = new OrderedSet<PersonRecord>();
+        private Dictionary<string, PersonRecord> dict = new Dictionary<string, PersonRecord>();
+        private MultiDictionary<string, PersonRecord> multidict = new MultiDictionary<string, PersonRecord>(false);
 
         public bool AddPhone(string name, IEnumerable<string> nums)
         {
             string name2 = name.ToLowerInvariant();
-            Class1 entry;
+            PersonRecord entry;
             bool flag = !this.dict.TryGetValue(name2, out entry);
             if (flag)
             {
-                entry = new Class1();
+                entry = new PersonRecord();
                 entry.Name = name;
-                entry.Strings = new SortedSet<string>();
+                entry.PhoneNumbers = new SortedSet<string>();
                 this.dict.Add(name2, entry);
                 this.sorted.Add(entry);
             }
@@ -30,7 +30,7 @@
                 this.multidict.Add(num, entry);
             }
 
-            entry.Strings.UnionWith(nums);
+            entry.PhoneNumbers.UnionWith(nums);
             return flag;
         }
 
@@ -39,16 +39,16 @@
             var found = this.multidict[oldent].ToList();
             foreach (var entry in found)
             {
-                entry.Strings.Remove(oldent);
+                entry.PhoneNumbers.Remove(oldent);
                 this.multidict.Remove(oldent, entry);
-                entry.Strings.Add(newent);
+                entry.PhoneNumbers.Add(newent);
                 this.multidict.Add(newent, entry);
             }
 
             return found.Count;
         }
 
-        public Class1[] ListEntries(int first, int num)
+        public PersonRecord[] ListEntries(int first, int num)
         {
             if (first < 0 || first + num > this.dict.Count)
             {
@@ -56,10 +56,10 @@
                 return null;
             }
 
-            Class1[] list = new Class1[num];
+            PersonRecord[] list = new PersonRecord[num];
             for (int i = first; i <= first + num - 1; i++)
             {
-                Class1 entry = this.sorted[i];
+                PersonRecord entry = this.sorted[i];
                 list[i - first] = entry;
             }
 
