@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\AbstractCommandsFactory.cs" />
     <Compile Include="Commands\CommandRemove.cs" />
+    <Compile Include="Factories\RegularCommandsFactory.cs" />
     <Compile Include="PersonRecord.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandAdd.cs" />

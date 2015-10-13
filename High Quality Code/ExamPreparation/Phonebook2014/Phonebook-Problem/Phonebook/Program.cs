@@ -1,20 +1,10 @@
 ﻿namespace Phonebook
 {
     using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.Odbc;
-    using System.Data.Sql;
-    using System.Data.SqlTypes;
-    using System.Linq;
-    using System.Net.Mail;
-    using System.Net.Mime;
-    using System.Net.Sockets;
-    using System.Text;
     using Phonebook.Commands;
-    using Phonebook.Converts;    
-    using Phonebook.Print;
-    using Wintellect.PowerCollections;   
+    using Phonebook.Converts;
+    using Phonebook.Factories; 
+    using Phonebook.Print;     
 
     public class Class2
     { 
@@ -23,10 +13,12 @@
             IPhonebookRepository phonebookRepository = new PhonebookRepository();
             IConvertable convertPhoneNumber = new Converter();
             IPrintable printer = new Printer();
-            ICommand add = new CommandAdd(convertPhoneNumber, phonebookRepository, printer);
-            ICommand change = new CommandChange(convertPhoneNumber, phonebookRepository, printer);
-            ICommand list = new CommandList(convertPhoneNumber, phonebookRepository, printer);
-            ICommand remove = new CommandRemove(convertPhoneNumber, phonebookRepository, printer);
+            AbstractCommandsFactory factory = new RegularCommandsFactory(convertPhoneNumber, phonebookRepository, printer);
+            ICommand add = factory.MakeCommandAdd();
+            ICommand change = factory.MakeCommandChange();
+            ICommand list = factory.MakeCommandList();
+            ICommand remove = factory.MakeCommandRemove();
+            
             while (true)
             {
                 string data = Console.ReadLine();
