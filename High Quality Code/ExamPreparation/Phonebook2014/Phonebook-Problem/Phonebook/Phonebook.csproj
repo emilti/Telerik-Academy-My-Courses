@@ -58,6 +58,7 @@
     <Compile Include="IPhonebookRepository.cs" />
     <Compile Include="Print\IPrinter.cs" />
     <Compile Include="Print\Printer.cs" />
+    <Compile Include="Processor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="REP.cs" />
     <Compile Include="PhonebookRepository.cs" />
