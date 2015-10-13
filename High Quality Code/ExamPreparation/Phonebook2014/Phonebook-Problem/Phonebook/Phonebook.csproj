@@ -45,7 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandAdd.cs" />
+    <Compile Include="Commands\CommandChange.cs" />
+    <Compile Include="Commands\CommandList.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Converts\ConvertPhoneNumber.cs" />
+    <Compile Include="Converts\IConvertable.cs" />
     <Compile Include="IPhonebookRepository.cs" />
+    <Compile Include="Print\IPrinter.cs" />
+    <Compile Include="Print\Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="REP.cs" />
     <Compile Include="REPNew.cs" />
