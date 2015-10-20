@@ -34,9 +34,9 @@
                 Console.WriteLine();               
             }          
 
-            string commandString = string.Format("INSERT INTO [{0}${1}{2}:{1}{2}] SET F1='{3}'", "Sheet1", "A", "6", "bbb");
-            OleDbCommand commande = new OleDbCommand(
-                commandString, myConnection);       
+           // string commandString = string.Format("INSERT INTO [{0}${1}{2}:{1}{2}] SET F1='{3}'", "Sheet1", "A", "6", "bbb");
+           // OleDbCommand commande = new OleDbCommand(
+           //     commandString, myConnection);       
             myConnection.Close();            
         }       
     }
