@@ -15,7 +15,7 @@
             this.students = new HashSet<Student>();
         }
 
-        public int Id { get; set; }
+        public int CourseId { get; set; }
 
         [Required]
         [MaxLength(50)]

@@ -15,17 +15,15 @@
             this.courses = new HashSet<Course>(); 
         }
 
-        public int Id { get; set; }
+        public int StudentId { get; set; }
 
         [Required]
         [MaxLength(100)]
         public string Name { get; set; }
-
-        [Required]        
+        
         public int Age { get; set; }
-
-        [Required]
-        public int Number { get; set; }
+        
+        public int StudentNumber { get; set; }
 
         [Required]
         public string Address { get; set; }
