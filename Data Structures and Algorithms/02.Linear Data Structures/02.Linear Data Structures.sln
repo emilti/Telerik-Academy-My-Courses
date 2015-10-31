@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.StackImplementation", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.QueueImplementation", "13.Queue\13.QueueImplementation.csproj", "{9FF6CB2C-FE6C-47F4-83B5-93863A58BF66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.LabyrintDistance", "14.LabyrintDistance\14.LabyrintDistance.csproj", "{75CEBC4B-60D0-4D15-A396-DBB518A82796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.TestLongestSubsequence", "04.TestLongestSubsequence\04.TestLongestSubsequence.csproj", "{9F98D01B-4B29-42DE-8CA2-04A4E1E3EE8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{9FF6CB2C-FE6C-47F4-83B5-93863A58BF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF6CB2C-FE6C-47F4-83B5-93863A58BF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF6CB2C-FE6C-47F4-83B5-93863A58BF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CEBC4B-60D0-4D15-A396-DBB518A82796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CEBC4B-60D0-4D15-A396-DBB518A82796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CEBC4B-60D0-4D15-A396-DBB518A82796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CEBC4B-60D0-4D15-A396-DBB518A82796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F98D01B-4B29-42DE-8CA2-04A4E1E3EE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F98D01B-4B29-42DE-8CA2-04A4E1E3EE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F98D01B-4B29-42DE-8CA2-04A4E1E3EE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F98D01B-4B29-42DE-8CA2-04A4E1E3EE8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

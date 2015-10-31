@@ -1,6 +1,4 @@
-﻿
-
-namespace LinearDataStructures
+﻿namespace LinearDataStructures
 {
     using System;
     using System.Collections.Generic;
@@ -16,12 +14,15 @@ namespace LinearDataStructures
         {
             List<int> numbers = new List<int>();
             numbers = new List<int> { 2, 3, -2, -1, -1 };
-
+            // numbers = new List<int> { 2, 3, -2, -2, -2, -1, -1 };
+            // numbers = new List<int> { 2, 3, -2, -1};
+            // numbers = new List<int> { 2 };
+            // numbers = new List<int> { 2, 2, 2, 3, -2, -1, -1 };
             // EnterNumbers(numbers);
-            int equalNumber;
-            int maxLength;
-            SearchLongestSequenceOfEqualNumbers(numbers, out equalNumber, out maxLength);
-            PrintSequence(equalNumber, maxLength);
+            Sequence sequence = new Sequence();
+            Searcher searcher = new Searcher();
+            sequence = searcher.SearchLongestSequenceOfEqualNumbers(numbers, sequence);            
+            PrintSequence(sequence.EqualNumber, sequence.Length);
         }
 
         private static void PrintSequence(int equalNumber, int maxLength)
@@ -40,38 +41,7 @@ namespace LinearDataStructures
 
             Console.WriteLine();
         }
-
-        private static void SearchLongestSequenceOfEqualNumbers(List<int> numbers, out int equalNumber, out int maxLength)
-        {
-            int length = 1;
-            int number = numbers[0];
-            equalNumber = numbers[0];
-            maxLength = 0;
-            for (int i = 1; i < numbers.Count; i++)
-            {
-                if (numbers[i] == numbers[i - 1])
-                {
-                    length++;
-                }
-
-                if (numbers[i] != numbers[i - 1] && length > 0)
-                {
-                    maxLength = length;
-                    equalNumber = numbers[i - 1];
-                    length = 1;
-                }
-
-                if (length >= maxLength &&
-                    numbers[i] == numbers[i - 1] &&
-                    i == numbers.Count - 1)
-                {
-                    equalNumber = numbers[i];
-                    maxLength = length;
-                    length = 1;
-                }
-            }
-        }
-
+     
         private static void EnterNumbers(List<int> numbers)
         {
             Console.WriteLine("Enter numbers:");
