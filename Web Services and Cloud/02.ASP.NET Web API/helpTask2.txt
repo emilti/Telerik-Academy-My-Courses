@@ -1,0 +1,53 @@
+task2
+Artist
+Get: api/artists
+Post: api/artists
+	Body:
+	{"name":"ArtistName",
+"country":"Bulgaria",
+"dateofbirth":"1970-10-10"}
+Put: http://localhost:1929/api/artists/id
+	Body:
+	{"name":"NewArtistName",
+"country":"Romania",
+"dateofbirth":"1970-10-10"}
+Delete: http://localhost:1929/api/Artist/id
+
+Song
+Get: api/songs
+Post: api/songs
+	Body:
+	{"title":"MySong",
+"year":"1999",
+"Genre":"ThisGenre"
+}
+put:http://localhost:1929/api/songs/id
+	Body:
+	{"title":"NewSong",
+"year":"2002",
+"Genre":"Genre"
+}
+Delete: http://localhost:1929/api/songs/id
+
+Album:
+Get: api/albums
+Post: api/albums
+	Body:
+	{
+  "Title": "album",
+  "Year": 1999,
+  "Producer": "Pesho",
+  "Price": 111
+}
+Post: api/albums/id
+	Body:
+	{
+  "Title": "album",
+  "Year": 1999,
+  "Producer": "Gosho",
+  "Price": 999
+}
+Delete: api/albums/id
+
+
+
