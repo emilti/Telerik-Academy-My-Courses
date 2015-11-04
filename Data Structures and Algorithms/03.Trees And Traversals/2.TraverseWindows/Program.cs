@@ -14,6 +14,8 @@ namespace TreeTraverse
 
         private static void DirSearch(string sDir)
         {
+
+
             foreach (string f in Directory.GetFiles(sDir))
             {
                 var extension = Path.GetExtension(f);
@@ -23,9 +25,16 @@ namespace TreeTraverse
                 }
             }
 
-            foreach (string d in Directory.GetDirectories(sDir))
+            try
             {
-                DirSearch(d);               
+                foreach (string d in Directory.GetDirectories(sDir))
+                {
+                    DirSearch(d);
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+
             }
         }
     }
