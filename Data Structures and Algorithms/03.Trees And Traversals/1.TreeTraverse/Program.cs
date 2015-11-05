@@ -14,7 +14,7 @@
                 nodes[i] = new Node<int>(i);
 			}
 
-            for (int i = 1; i < m ; i++)
+            for (int i = 1; i < m; i++)
             {
                 string inputRow = Console.ReadLine();
                 var separatedRow = inputRow.Split(' ');
@@ -49,10 +49,8 @@
             int searchedSum = int.Parse(Console.ReadLine());
             List<Node<int>> currentPath = new List<Node<int>>();
             List<List<Node<int>>> paths = new List<List<Node<int>>>();
-            var MyNodes = DFS(FindRoot(nodes, hasParent), searchedSum, currentPath, paths);
-       
+            var myNodes = DFS(FindRoot(nodes, hasParent), searchedSum, currentPath, paths);       
         }
-
 
         private static List<List<Node<int>>> DFS(Node<int> node, int searchedSum,  List<Node<int>> currentPath, List<List<Node<int>>> paths)
         {            
@@ -62,12 +60,14 @@
                 {
                     paths.Add(currentPath);
                 }
+
                 DFS(child, searchedSum - child.Value, currentPath, paths);
                 currentPath.Add(child);
             }
 
             return paths;
         }
+
         private static int FindLongestPath(Node<int> root)
         {
             if (root.Children.Count == 0)
@@ -118,7 +118,6 @@
                     hasParent[node.Value] = true;
                 }
             }
-
 
             for (int k = 0; k < hasParent.Length; k++)
             {

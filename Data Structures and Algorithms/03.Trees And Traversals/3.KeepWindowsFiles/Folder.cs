@@ -25,8 +25,8 @@
         {
             foreach (string fileName in Directory.GetFiles(folder.Name))
             {
-                FileInfo fInfo = new FileInfo(fileName);
-                long currentSize = fInfo.Length;
+                FileInfo fileInfo = new FileInfo(fileName);
+                long currentSize = fileInfo.Length;
                 this.SizeOfAllChildFiles = this.SizeOfAllChildFiles + currentSize;
                 File file = new File(fileName, currentSize);
                 folder.Files.Add(file);
@@ -38,12 +38,11 @@
                 {
                     Folder currentFolder = new Folder(d);
                     folder.ChildFolders.Add(currentFolder);
-                    GetAllFileSizes(currentFolder);
+                    this.GetAllFileSizes(currentFolder);
                 }
             }
             catch (UnauthorizedAccessException)
             {
-
             }           
         }
     }

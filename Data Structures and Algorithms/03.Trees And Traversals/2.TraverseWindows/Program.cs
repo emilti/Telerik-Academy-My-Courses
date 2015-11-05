@@ -5,18 +5,17 @@ namespace TreeTraverse
 {
     using System;
     using System.IO;
-    class Program
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             DirSearch(@"C:\Windows");
         }
 
-        private static void DirSearch(string sDir)
+        private static void DirSearch(string dir)
         {
-
-
-            foreach (string f in Directory.GetFiles(sDir))
+            foreach (string f in Directory.GetFiles(dir))
             {
                 var extension = Path.GetExtension(f);
                 if (extension == ".exe")
@@ -27,14 +26,13 @@ namespace TreeTraverse
 
             try
             {
-                foreach (string d in Directory.GetDirectories(sDir))
+                foreach (string d in Directory.GetDirectories(dir))
                 {
                     DirSearch(d);
                 }
             }
             catch (UnauthorizedAccessException)
             {
-
             }
         }
     }

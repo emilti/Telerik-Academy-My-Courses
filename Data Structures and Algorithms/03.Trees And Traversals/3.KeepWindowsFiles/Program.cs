@@ -3,9 +3,9 @@
     using System;
     using System.IO;
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string file = @"C:\Windows";
             Folder root = new Folder(file);           
@@ -17,8 +17,8 @@
         {
             foreach (string fileName in Directory.GetFiles(folder.Name))
             {
-               FileInfo fInfo = new FileInfo(fileName);
-               long size = fInfo.Length;              
+               FileInfo fileInfo = new FileInfo(fileName);
+               long size = fileInfo.Length;              
                File file = new File(fileName, size);
                Console.WriteLine(file.Name + " - " + file.Size);
                folder.SizeOfAllChildFiles = folder.SizeOfAllChildFiles + size;
@@ -36,9 +36,7 @@
             }
             catch (UnauthorizedAccessException)
             {
-
             }
         }
-
     }
 }
