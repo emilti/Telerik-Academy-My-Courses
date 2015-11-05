@@ -5,7 +5,6 @@ using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(StudentsSystem.Api.Startup))]
-
 namespace StudentsSystem.Api
 {
     public partial class Startup
