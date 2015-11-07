@@ -59,7 +59,7 @@
                 Console.WriteLine("Students searched by both names:");
                 foreach (var st in studentsByBothNames)
                 {
-                    Console.WriteLine("Student:" + st.FirstName + " " + st.LastName);
+                    Console.WriteLine("Student: " + st.FirstName + " " + st.LastName);
                 }
 
                 Console.WriteLine();
