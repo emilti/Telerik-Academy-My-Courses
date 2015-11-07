@@ -13,7 +13,6 @@
     {
         public const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-
         public static void Main()
         {
             OrderedMultiDictionary<decimal, Article> articlesByPrice = new OrderedMultiDictionary<decimal, Article>(true);
@@ -35,7 +34,7 @@
                 var lowerBound = random.Next(1, 9950);
                 var upperBound = lowerBound + 50;
                 var articlesInRange = articlesByPrice.Range(lowerBound, true, upperBound, true);                
-                Console.WriteLine("Articles in price range {0}- {1}: {2} articles",lowerBound, upperBound, articlesInRange.Values.Count);
+                Console.WriteLine("Articles in price range {0}- {1}: {2} articles", lowerBound, upperBound, articlesInRange.Values.Count);
             }
         }
 

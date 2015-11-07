@@ -1,8 +1,7 @@
 ﻿namespace BiDictionaryImplementation
 {
-    using System.Collections.Generic;
-    using Wintellect.PowerCollections;
     using System.Linq;
+    using Wintellect.PowerCollections;    
 
     /// <summary>
     /// Implement a class BiDictionary<K1,K2,T> that allows adding triples {key1, key2, value} and 
@@ -14,7 +13,6 @@
     /// <typeparam name="T">Template value</typeparam>
     public class BiDictionary<K1, K2, T>
     {
-
         private MultiDictionary<K1, T> keysFirst;
         private MultiDictionary<K2, T> keysSecond;
         private MultiDictionary<string, T> keysBoth;
@@ -26,20 +24,20 @@
             this.keysBoth = new MultiDictionary<string, T>(true);
         }
 
-        public void Add(K1 keyFirst,K2 keySecond, T element)
+        public void Add(K1 keyFirst, K2 keySecond, T element)
         {
-            keysFirst.Add(keyFirst, element);
-            keysSecond.Add(keySecond, element);
+            this.keysFirst.Add(keyFirst, element);
+            this.keysSecond.Add(keySecond, element);
             string keysConcatenated = keyFirst.ToString() + keySecond.ToString();
-            keysBoth.Add(keysConcatenated, element);
+            this.keysBoth.Add(keysConcatenated, element);
         }
 
         public void Remove(K1 keyFirst, K2 keySecond, T element)
         {
-            keysFirst.Remove(keyFirst);
-            keysSecond.Remove(keySecond);
-            string keysConcatenated = keysFirst.ToString() + keysSecond.ToString();
-            keysBoth.Remove(keysConcatenated, element);
+            this.keysFirst.Remove(keyFirst);
+            this.keysSecond.Remove(keySecond);
+            string keysConcatenated = keyFirst.ToString() + keySecond.ToString();
+            this.keysBoth.Remove(keysConcatenated, element);
         }
 
         public T[] FindByFirstKey(K1 keyFirst)
