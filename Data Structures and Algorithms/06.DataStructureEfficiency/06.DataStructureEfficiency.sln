@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.StudentsSorting", "01.StudentsSorting\01.StudentsSorting.csproj", "{FEFF2BE8-13C3-4E61-844F-AC0A19BA9DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CompanyWithStoredArticles", "02.CompanyWithStoredArticles\02.CompanyWithStoredArticles.csproj", "{5CD220A7-5E7F-4CCD-B0A7-3024186B2997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FEFF2BE8-13C3-4E61-844F-AC0A19BA9DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEFF2BE8-13C3-4E61-844F-AC0A19BA9DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEFF2BE8-13C3-4E61-844F-AC0A19BA9DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD220A7-5E7F-4CCD-B0A7-3024186B2997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD220A7-5E7F-4CCD-B0A7-3024186B2997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD220A7-5E7F-4CCD-B0A7-3024186B2997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD220A7-5E7F-4CCD-B0A7-3024186B2997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
