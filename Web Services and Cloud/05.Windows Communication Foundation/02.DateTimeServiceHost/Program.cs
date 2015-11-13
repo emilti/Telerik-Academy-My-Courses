@@ -1,15 +1,13 @@
-﻿using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using DateTimeConverter;
-
-
-
-namespace Host 
+﻿namespace Host 
 {
-    class Host
+    using System;
+    using System.ServiceModel;
+    using System.ServiceModel.Description;
+    using DateTimeConverter;
+
+    public class Host
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Uri serviceAddress = new Uri("http://localhost:8000/DateTimeService");
             ServiceHost selfHost = new ServiceHost(typeof(DateTimeService));
@@ -27,5 +25,3 @@ namespace Host
         }
     }
 }
-
-

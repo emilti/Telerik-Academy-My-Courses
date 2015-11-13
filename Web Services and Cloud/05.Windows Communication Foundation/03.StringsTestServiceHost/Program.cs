@@ -1,13 +1,13 @@
-﻿using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using StringsService;
-
-namespace StringsTest
+﻿namespace StringsTest
 {
-    class Host
+    using System;
+    using System.ServiceModel;
+    using System.ServiceModel.Description;
+    using StringsService;
+
+    public class Host
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Uri serviceAddress = new Uri("http://localhost:9000/StringsTestService");
             ServiceHost selfHost = new ServiceHost(typeof(StringsTestService));
@@ -25,5 +25,3 @@ namespace StringsTest
         }
     }
 }
-
-
