@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BinaryPasswords", "01.BinaryPasswords\01.BinaryPasswords.csproj", "{CE90D958-FA85-40BE-92E3-B7275242C48F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ColorfulRabbits", "02.ColorfulRabbits\02.ColorfulRabbits.csproj", "{974ECB7D-4563-4626-8C9F-6BDF9D52895D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Dividers", "03.Dividers\03.Dividers.csproj", "{E7D5AADB-43E6-40D7-88CD-1B4E9B86EA62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE90D958-FA85-40BE-92E3-B7275242C48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE90D958-FA85-40BE-92E3-B7275242C48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE90D958-FA85-40BE-92E3-B7275242C48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE90D958-FA85-40BE-92E3-B7275242C48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974ECB7D-4563-4626-8C9F-6BDF9D52895D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974ECB7D-4563-4626-8C9F-6BDF9D52895D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974ECB7D-4563-4626-8C9F-6BDF9D52895D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974ECB7D-4563-4626-8C9F-6BDF9D52895D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D5AADB-43E6-40D7-88CD-1B4E9B86EA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D5AADB-43E6-40D7-88CD-1B4E9B86EA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D5AADB-43E6-40D7-88CD-1B4E9B86EA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D5AADB-43E6-40D7-88CD-1B4E9B86EA62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
