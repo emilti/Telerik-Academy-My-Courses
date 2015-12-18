@@ -1,0 +1,68 @@
+﻿ <div>
+    <div class="game-row">
+        <div class="borderingBottom borderingRight box">
+            <div ng-if="vm.box11 == '-'" style="height:100px;" ng-click="vm.play(1, 1)">
+            </div>   
+            <img src="../../styles/playX.png" ng-show="vm.box11 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box11 == 'O'" />
+        </div>
+        <div class="borderingBottom borderingRight box">
+            <div ng-if="vm.box12 == '-'" style="height:100px" ng-click="vm.play(1, 2)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box12 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box12 == 'O'" />
+        </div>
+        <div class="borderingBottom box">
+            <div ng-if="vm.box13 == '-'" style="height: 100px" ng-click="vm.play(1, 3)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box13 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box13 == 'O'" />
+        </div>
+    </div>
+     <div class="clear"></div>
+    <div  class="game-row">
+        <div class="borderingBottom borderingRight box">
+            <div ng-if="vm.box21 == '-'" style="height:100px;" ng-click="vm.play(2, 1)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box21 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box21 == 'O'" />
+        </div>
+        <div class="borderingBottom borderingRight box">
+            <div ng-if="vm.box22 == '-'" style="height:100px" ng-click="vm.play(2, 2)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box22 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box22 == 'O'" />
+        </div>        
+        <div class="borderingBottom box">
+            <div ng-if="vm.box23 == '-'" style="height: 100px" ng-click="vm.play(2, 3)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box23 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box23 == 'O'" />
+        </div>
+    </div>
+     <div class="clear"></div>
+    <div  class="game-row">
+        <div class="borderingRight box">
+            <div ng-if="vm.box31 == '-'" style="height:100px;" ng-click="vm.play(3, 1)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box31 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box31 == 'O'" />
+        </div>
+        <div class="borderingRight box">
+            <div ng-if="vm.box32 == '-'" style="height:100px" ng-click="vm.play(3, 2)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box32 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box32 == 'O'" />
+        </div>
+        <div class="box">
+            <div ng-if="vm.box33 == '-'" style="height: 100px" ng-click="vm.play(3, 3)">
+            </div>
+            <img src="../../styles/playX.png" ng-show="vm.box33 == 'X'" />
+            <img src="../../styles/playO.png" ng-show="vm.box33 == 'O'" />
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <h3 ng-if="vm.waitForOppponentMove">Wait for Opponent Move</h3>
+        <h3 ng-if="vm.waitForJoin">Wait for Opponent To Join</h3>
+

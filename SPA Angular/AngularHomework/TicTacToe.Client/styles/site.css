@@ -1,0 +1,26 @@
+﻿body {
+    margin-top: 60px;     
+}
+
+.borderingRight{
+    border-right: 10px solid black;   
+}
+
+.borderingBottom {
+    border-bottom: 10px solid black;
+}
+
+.box{
+    width:120px;
+    height:120px;  
+    float:left   
+}
+
+.game-row{
+    float:left
+}
+
+.clear {
+    clear:both;
+}
+
