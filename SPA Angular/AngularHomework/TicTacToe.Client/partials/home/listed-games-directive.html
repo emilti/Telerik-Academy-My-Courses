@@ -1,0 +1,25 @@
+﻿<div>
+    <table class="games">
+        <tr>
+        <th class="text-centrer">
+            Game ID
+        </th>
+        <th class="text-center">
+            First Player
+        </th>
+        <th class="text-center">
+            Second Player
+        </th>
+        <th class="text-center">
+            State
+        </th>
+        </tr>
+        <tr  ng-repeat="game in vm.games">
+            <td  class="text-center"><a href="game/details/{{game.Id}}">{{game.Id}}</a></td>
+            <td  class="text-center">{{game.FirstPlayer.UserName}}</td>
+            <td  class="text-center">{{game.SecondPlayer.UserName}}</td>
+            <td  class="text-center">{{game.State}}</td>
+        </tr>
+    </table>
+
+</div>

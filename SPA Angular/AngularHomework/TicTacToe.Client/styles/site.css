@@ -24,3 +24,16 @@
     clear:both;
 }
 
+.games{
+    border:1px solid black
+}
+.games tr td{
+    padding: 5px;
+    border: 1px solid black
+}
+
+.games th{
+     padding: 5px;
+    border: 1px solid black;
+    text-align:center
+}

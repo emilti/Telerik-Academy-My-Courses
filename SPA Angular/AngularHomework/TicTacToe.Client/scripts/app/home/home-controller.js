@@ -1,11 +1,23 @@
 ﻿(function () {
     'use strict';
-    function HomeController() {
+    function HomeController(identity, ticTacToeGame) {
         var vm = this;
 
-        vm.hi = 'Hi!'
+        waitForLogin();
+        
+        ticTacToeGame.getGames()
+           .then(function (games) {               
+               vm.games = games;             
+           });
+
+        function waitForLogin() {
+            identity.getUser()
+            .then(function (user) {
+                vm.userLogged = user;
+            });
+        }
     }
 
     angular.module('ticTacToeApp.controllers')
-        .controller('HomeController', [HomeController]);
+        .controller('HomeController', ['identity', 'ticTacToeGame', HomeController]);
 }())

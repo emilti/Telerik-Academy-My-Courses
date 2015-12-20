@@ -26,8 +26,7 @@
             <div class="navbar-collapse collapse" id="navbar-main">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li ng-if="vm.globallySetCurrentUser"><a href="/game/creategame">Create New Game</a></li>
-                    <li ng-if="vm.globallySetCurrentUser"><a href="/game/joingame">Join Game</a></li>
+                    <li ng-if="vm.globallySetCurrentUser"><a href="/game/creategame">Create New Game</a></li>                 
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right" ng-if="!vm.globallySetCurrentUser">
@@ -67,6 +66,7 @@
 
     <script src="scripts/app/app.js"></script>
     <script src="scripts/app/common/main-controller.js"></script>
+    <script src="scripts/app/common/data.js"></script>
     <script src="scripts/app/identity/register-controller.js"></script>
     <script src="scripts/app/home/home-controller.js"></script>
     <script src="scripts/app/identity/login-controller.js"></script>  
@@ -76,5 +76,7 @@
     <script src="scripts/app/game/join-game-controller.js"></script>
     <script src="scripts/app/game/game-service.js"></script>
     <script src="scripts/app/game/current-game-controller.js"></script>
+    <script src="scripts/app/game/listed-games-directive.js"></script>
+    <script src="scripts/app/game/details-controller.js"></script>
 </body>
 </html>

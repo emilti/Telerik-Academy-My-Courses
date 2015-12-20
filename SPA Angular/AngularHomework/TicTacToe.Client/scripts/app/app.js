@@ -48,6 +48,11 @@
                 controller: 'CurrentGameController',
                 controllerAs: CONTROLLER_VIEW_MODEL_NAME
             })
+            .when('/game/details/:gameid', {
+                templateUrl: 'partials/game/details-game.html',
+                controller: 'DetailsController',
+                controllerAs: CONTROLLER_VIEW_MODEL_NAME
+            })
             .otherwise({ redirectTo: '/' })
     }
 
@@ -65,10 +70,9 @@
     };
 
     angular.module('ticTacToeApp.services', []);
+    angular.module('ticTacToeApp.directives', []);
     angular.module('ticTacToeApp.controllers', ['ticTacToeApp.services']);
-
-
-    angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ticTacToeApp.controllers'])
+    angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ticTacToeApp.controllers', 'ticTacToeApp.directives'])
         .config(['$routeProvider', '$locationProvider', config])
         .run(['$http', '$cookies', '$rootScope', '$location', 'auth', run])
         .constant('baseUrl', 'http://localhost:33257/');

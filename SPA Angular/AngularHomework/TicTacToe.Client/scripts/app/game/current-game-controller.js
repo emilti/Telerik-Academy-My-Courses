@@ -30,34 +30,34 @@
 
         function Check(gameStatus) {
             console.log(gameStatus);   
-            vm.box11 = gameStatus.data.Board[0];
-            vm.box12 = gameStatus.data.Board[1];
-            vm.box13 = gameStatus.data.Board[2];
+            vm.box11 = gameStatus.Board[0];
+            vm.box12 = gameStatus.Board[1];
+            vm.box13 = gameStatus.Board[2];
 
-            vm.box21 = gameStatus.data.Board[3];
-            vm.box22 = gameStatus.data.Board[4];
-            vm.box23 = gameStatus.data.Board[5];
+            vm.box21 = gameStatus.Board[3];
+            vm.box22 = gameStatus.Board[4];
+            vm.box23 = gameStatus.Board[5];
 
-            vm.box31 = gameStatus.data.Board[6];
-            vm.box32 = gameStatus.data.Board[7];
-            vm.box33 = gameStatus.data.Board[8];
+            vm.box31 = gameStatus.Board[6];
+            vm.box32 = gameStatus.Board[7];
+            vm.box33 = gameStatus.Board[8];
             identity.getUser()
                 .then(function (user) {
                     vm.user = user;
                     // console.log('inside ' + gameStatus.data)
-                    if (gameStatus.data.State == "0") {
+                    if (gameStatus.State == "0") {
                         vm.waitForJoin = true;
                         vm.makeTurn = false;
                         vm.waitForOppponentMove = false;
                     }
-                    else if ((gameStatus.data.State == "1" && gameStatus.data.FirstPlayerName == vm.user.Email) ||
-                        (gameStatus.data.State == "2" && gameStatus.data.SecondPlayerName == vm.user.Email)) {
+                    else if ((gameStatus.State == "1" && gameStatus.FirstPlayerName == vm.user.Email) ||
+                        (gameStatus.State == "2" && gameStatus.SecondPlayerName == vm.user.Email)) {
                         vm.makeTurn = true;
                         vm.waitForOppponentMove = false;
                         vm.waitForJoin = false;
                     }
-                    else if ((gameStatus.data.State == "1" && gameStatus.data.SecondPlayerName == vm.user.Email) ||
-                        (gameStatus.data.State == "2" && gameStatus.data.FirstPlayerName == vm.user.Email)) {
+                    else if ((gameStatus.State == "1" && gameStatus.SecondPlayerName == vm.user.Email) ||
+                        (gameStatus.State == "2" && gameStatus.FirstPlayerName == vm.user.Email)) {
                         vm.makeTurn = false;
                         vm.waitForOppponentMove = true;
                         vm.waitForJoin = false;

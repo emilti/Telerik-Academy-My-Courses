@@ -1,18 +1,20 @@
 ﻿(function () {
     'use strict';
 
-    function JoinGameController($location, ticTacToeGame) {
+    function JoinGameController($location, $cookies, ticTacToeGame) {
         var vm = this;
 
         vm.join = function () {
             ticTacToeGame.joinGame()
                 .then(function (response) {
-                    alert('GAME JOINED!');                   
-                    $location.path('/game/' + response.data);
+                    alert('GAME JOINED!');
+                    console.log(response);
+                    $cookies.put('MyGame', response);
+                    $location.path('/game/' + response);
                 });
         }
     }
 
     angular.module('ticTacToeApp.controllers')
-        .controller('JoinGameController', ['$location', 'ticTacToeGame', JoinGameController]);
+        .controller('JoinGameController', ['$location', '$cookies', 'ticTacToeGame', JoinGameController]);
 }())

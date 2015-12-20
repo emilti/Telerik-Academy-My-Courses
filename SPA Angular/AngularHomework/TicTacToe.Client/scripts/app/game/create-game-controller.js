@@ -7,9 +7,10 @@
         vm.createGame = function () {
             ticTacToeGame.createGame()
                 .then(function (response) {
-                    alert('GAME CREATED!');                    
-                    $cookies.put('MyGame', response.data);
-                    $location.path('/game/' + response.data);
+                    alert('GAME CREATED!');
+                    console.log(response)
+                    $cookies.put('MyGame', response);
+                    $location.path('/game/' + response);
                 });
         }
     }

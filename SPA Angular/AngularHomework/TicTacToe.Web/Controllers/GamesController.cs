@@ -46,13 +46,13 @@ using TicTacToe.Web.Infrastructure;
         }
 
         [HttpPost]
-        public IHttpActionResult Join()
+        public IHttpActionResult Join(JoinGameModel gameForJoin)
         {
             var currentUserId = this.userIdProvider.GetUserId();
 
             var game = this.data.Games
                 .All()
-                .Where(g => g.State == GameState.WaitingForSecondPlayer && g.FirstPlayerId != currentUserId)
+                .Where(g => g.Id.ToString() == gameForJoin.GameId && g.FirstPlayerId != currentUserId)
                 .FirstOrDefault();
 
             if (game == null)
@@ -68,7 +68,16 @@ using TicTacToe.Web.Infrastructure;
         }
 
         [HttpGet]
-        public IHttpActionResult Status(string gameId)
+        public IHttpActionResult GetGames()
+        {
+            var allGames = this.data.Games.All().ToList();
+
+            return Ok(allGames);
+        }
+
+
+        [HttpGet]
+        public IHttpActionResult status(string gameId)
         {
             var currentUserId = this.userIdProvider.GetUserId();
             var idAsGuid = new Guid(gameId);
@@ -102,6 +111,37 @@ using TicTacToe.Web.Infrastructure;
 
             return Ok(gameInfo);
         }
+
+        [HttpGet]
+        public IHttpActionResult details(string gameId)
+        {
+            var currentUserId = this.userIdProvider.GetUserId();
+            var idAsGuid = new Guid(gameId);
+
+            var game = this.data.Games.All()
+                .Where(x => x.Id == idAsGuid)
+                .Select(x => new { x.FirstPlayerId, x.SecondPlayerId })
+                .FirstOrDefault();
+            if (game == null)
+            {
+                return this.NotFound();
+            }
+
+            var gameInfo = this.data.Games.All()
+                .Where(g => g.Id == idAsGuid)
+                .Select(g => new GameInfoDataModel()
+                {
+                    Board = g.Board,
+                    Id = g.Id,
+                    State = g.State,
+                    FirstPlayerName = g.FirstPlayer.UserName,
+                    SecondPlayerName = g.SecondPlayer.UserName,
+                })
+                .FirstOrDefault();
+
+            return Ok(gameInfo);
+        }
+
 
         /// <param name="row">1,2 or 3</param>
         /// <param name="col">1,2 or 3</param>

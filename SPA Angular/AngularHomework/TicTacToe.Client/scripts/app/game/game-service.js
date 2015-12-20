@@ -1,74 +1,50 @@
 ﻿(function () {
     'use strict';
 
-    function ticTacToeGameService($http, $q, $cookies, baseUrl) {
+    function ticTacToeGameService($routeParams, $cookies, data) {
+
+        function getGames() {
+            return data.get('api/games/GetGames');
+        }
+        
 
         function createGame() {
-            var defered = $q.defer();
-
-            $http.post(baseUrl + 'api/games/create')
-                .then(function (response) {
-                    defered.resolve(response);
-                }, function (err) {
-                    defered.reject(err);
-                });
-
-            return defered.promise;
+            return data.post('api/games/create');           
         }
 
-        function joinGame() {
-            var defered = $q.defer();
-
-            $http.post(baseUrl + 'api/games/join')
-                .then(function (response) {
-                    defered.resolve(response);
-                }, function (err) {
-                    defered.reject(err);
-                });
-
-            return defered.promise;
+        function joinGame(id) {
+            console.log(id)
+            var gameForJoin = {gameId: id}
+            return data.post('api/games/join', gameForJoin);
         }
 
-        function getStatus() {
-            var defered = $q.defer();
-            var gameId = $cookies.get('MyGame');
-            $http.get(baseUrl + 'api/games/Status', {
-                params: { gameId: gameId}
-            })
-                .then(function (response) {
-                    defered.resolve(response);
-                }, function (err) {
-                    defered.reject(err);
-                });
-
-            return defered.promise;
+        function getStatus() {            
+            var gameId = { gameId: $routeParams.gameid };
+            return data.get('api/games/status', gameId);           
         }
 
-        function playMove(move) {
-            var defered = $q.defer();
-            console.log('move:' + move.row);
-            
+        function details() {
+            var gameId = { gameId: $routeParams.gameid };
+            return data.get('api/games/details', gameId);
+        }
+
+        function playMove(move) {   
             var gameId = $cookies.get('MyGame');
             var moveForServer = { gameId: gameId, row: move.row, col: move.col };
-            console.log('moveForServer:' + moveForServer);
-            $http.post(baseUrl + 'api/games/play', moveForServer)
-                 .then(function () {
-                     defered.resolve(true);
-                 }, function (err) {
-                     defered.reject(err);
-                 })
-
-            return defered.promise;
+            console.log(moveForServer);
+            return data.post('api/games/Play', moveForServer);
         }
 
         return {
+            getGames: getGames,
             createGame: createGame,
             joinGame: joinGame,
             getStatus: getStatus,
-            playMove: playMove
+            playMove: playMove,
+            details: details
         }
     }
 
     angular.module('ticTacToeApp.services')
-        .factory('ticTacToeGame', ['$http', '$q', '$cookies', 'baseUrl', ticTacToeGameService]);
+        .factory('ticTacToeGame', ['$routeParams', '$cookies','data', ticTacToeGameService]);
 }())
