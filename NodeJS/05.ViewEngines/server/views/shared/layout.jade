@@ -1,0 +1,20 @@
+doctype
+html
+    head
+        title Electronic Devices
+        link(rel="stylesheet" href="/lib/bootstrap-3.3.6/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+    body
+        header.nav.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-collapse.collapse
+               ul.nav.navbar-nav
+                  each val in ["Home", "SmartPhones", "Tablets", "Wearables"]
+                     li
+                        a(href=val)=val
+       .container
+            block main-content
+        footer
+            p.text-center
+                | &copy; Telerik Academy 2014
+        include scripts
