@@ -9,4 +9,7 @@ module.exports = function(app) {
     app.get('/smartphones', SmartphonesController.getSmartphones);
     app.get('/tablets', TabletsController.getTablets);
     app.get('/wearables', WearablesController.getWearables);
+    app.get('/', function(req, res){
+        res.render('home/home');
+    })
 }
