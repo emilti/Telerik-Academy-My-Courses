@@ -1,0 +1,29 @@
+extends ../shared/layout
+block main-content
+   div(class="row")
+       div(class="col-md-3")
+          if viewedMovie.image
+             img(src=viewedMovie.image , style="width:130px; height:150px")
+          else
+             img(src="images/movie-default.png", style="width:100px")
+       div(class="col-md-9")
+           div(class="panel panel-primary")
+              div(class="panel-heading")
+                 h3(class="panel-title text-center") Movie:
+              div(class="panel-body")
+                 table(class="table table-bordered")
+                    tr
+                       td(class='text-center') Title
+                       td(class='text-center')
+                          = viewedMovie.title
+                    tr
+                       td(class='text-center') Description
+                       td(class='text-center')
+                          = viewedMovie.description
+                    tr
+                       td(class='text-center') Created by
+                       td(class='text-center')
+                          = viewedMovie.publisher
+
+   if(matchedUser)
+      a(href=viewedMovie._id + "/edit" class="btn btn-primary btn-lg") Edit

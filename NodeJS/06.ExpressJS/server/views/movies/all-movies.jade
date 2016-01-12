@@ -1,0 +1,18 @@
+extends ../shared/layout
+block main-content
+   div(class="row")
+       each movie in result
+          div(class="col-md-2")
+              div(class="panel panel-primary")
+                  div(class="panel-heading")
+                     div(class='text-center')
+                         a(href="movies/" + movie._id style="color: white")
+                            = movie.title
+                  div(class="panel-body")
+                      if movie.image
+                          img.media-object(src=movie.image , style="width:130px; height:150px")
+                      else
+                          img.media-object(src="images/movie-default.png", style="width:130px; height=150px")
+          div(class="col-md-1")
+
+

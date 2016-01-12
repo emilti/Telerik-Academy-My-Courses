@@ -1,0 +1,10 @@
+extends ../shared/layout
+block main-content
+   form(method="post")
+      label(for="title") Title
+      input(id="title" class="form-control" type="text" name="title" value=viewedMovie.title)
+      br
+      label(for="description") Description
+      input(id="description" class="form-control" type="text" name="description" value=viewedMovie.description)
+      br
+      input(type="submit" class="btn btn-lg" value="Change")

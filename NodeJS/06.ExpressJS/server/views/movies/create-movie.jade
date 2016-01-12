@@ -1,0 +1,18 @@
+extends ../shared/layout
+block main-content
+   form(action="/create-movie", method="post", enctype="multipart/form-data")
+      label(for="posted-by") User
+      input(id="posted-by" class="form-control" type="text" name="postedby" placeholder="Posted By" value=currentUser.username disabled="disabled")
+      br
+      label(for="title") Title
+      input(id="title" class="form-control" type="text" name="title" placeholder="Title")
+      br
+      label(for="description") description
+      input(id="description" class="form-control" type="text" name="description" placeholder="Description")
+      label(for="imageUrl") image URL
+      input(id="imageUrl" class="form-control" type="text" name="imageUrl" placeholder="image URL")
+      br
+      label(for="image") image
+      input(type="file", name="image-file", placeholder="Image ")
+      br
+      input(type="submit" class="btn btn-lg" value="Add movie")
