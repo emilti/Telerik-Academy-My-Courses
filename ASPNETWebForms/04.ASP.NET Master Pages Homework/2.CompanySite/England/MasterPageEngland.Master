@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#"
+     AutoEventWireup="true" 
+    CodeBehind="MasterPageEngland.master.cs"
+     Inherits="_2.CompanySite.England.MasterPageEngland" 
+    MasterPageFile="~/Site.Master"%>
+
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderPageContent"
+    ID="ContentPage" runat="server">
+
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="HomeEngland.aspx">Home</a></li>
+                <li><a href="ContactsEngland.aspx">Contacts</a></li>
+                <li><a href="AboutEngland.aspx">About</a></li>
+            </ul>
+        </div>
+        <div class="content col-md-7 jumbotron">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderEngland" runat="server" />
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+
+</asp:Content>
