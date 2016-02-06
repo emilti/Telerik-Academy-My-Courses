@@ -1,0 +1,103 @@
+﻿@model MoviesSystem.ViewModels.MovieFullInfoViewModel
+
+@{
+    ViewBag.Title = "Edit Movie Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Ajax.BeginForm("UpdateForm", new { id = Model.Id },
+                                        new AjaxOptions
+                                        {
+                                            HttpMethod = "POST"
+                                        }, new { id = "updateForm" }))
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input type="text" name="title" value=@Model.Title />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Director
+            </td>
+            <td>
+                <input type="text" name="Director" value=@Model.Director />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Year
+            </td>
+            <td>
+                <input type="text" name="Year" value=@Model.Year />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Male Role
+            </td>
+            <td>
+                <input type="text" name="LeadingMaleRole" value=@Model.LeadingMaleRole />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Male Role Age
+            </td>
+            <td>
+                <input type="text" name="LeadingMaleRoleAge" value=@Model.LeadingMaleRoleAge />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Female Role
+            </td>
+            <td>
+                <input type="text" name="LeadingFemaleRole" value=@Model.LeadingFemaleRole />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Female Role Age
+            </td>
+            <td>
+                <input type="text" name="LeadingFemaleRoleAge" value=@Model.LeadingFemaleRoleAge />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studio
+            </td>
+            <td>
+                <input type="text" name="Studio" value=@Model.Studio />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studio Address
+            </td>
+            <td>
+                <input type="text" name="StudioAddress" value=@Model.StudioAddress />
+            </td>
+        </tr>
+    </table>
+    <div class="row">
+        <div class="col-md-1">
+            <input type="submit" class="btn btn-warning" />
+        </div>       
+        <div class="col-md-1">
+            @Html.ActionLink("Cancel", "EditMovie", new { id = @Model.Id }, new { @class = "btn btn-primary" })
+        </div>
+        <div class="col-md-10"></div>        
+    </div>
+}
+
+
+
+
+

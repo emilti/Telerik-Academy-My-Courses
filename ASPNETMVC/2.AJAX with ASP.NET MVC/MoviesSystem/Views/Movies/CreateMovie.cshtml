@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Create New Movie";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Ajax.BeginForm("CreateForm",
+                                        new AjaxOptions
+                                        {
+                                            HttpMethod = "POST"
+                                        }))
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input type="text" name="title" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Director
+            </td>
+            <td>
+                <input type="text" name="Director"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Year
+            </td>
+            <td>
+                <input type="text" name="Year" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Male Role
+            </td>
+            <td>
+                <input type="text" name="LeadingMaleRole" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Male Role Age
+            </td>
+            <td>
+                <input type="text" name="LeadingMaleRoleAge" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Female Role
+            </td>
+            <td>
+                <input type="text" name="LeadingFemaleRole" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leading Female Role Age
+            </td>
+            <td>
+                <input type="text" name="LeadingFemaleRoleAge" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studio
+            </td>
+            <td>
+                <input type="text" name="Studio"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studio Address
+            </td>
+            <td>
+                <input type="text" name="StudioAddress" />
+            </td>
+        </tr>
+    </table>
+    <input type="submit" class="btn btn-success" />
+}
+
+

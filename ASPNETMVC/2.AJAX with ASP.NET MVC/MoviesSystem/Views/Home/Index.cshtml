@@ -1,0 +1,40 @@
+﻿@model List<MoviesSystem.ViewModels.MovieViewModel>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Ajax.BeginForm("Index", null,
+                            new AjaxOptions
+                            {
+                                UpdateTargetId = "results",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "POST"
+                            }, new { id = "searchForm" }))
+{
+    <input type="text" name="query" oninput="changed()" />
+    <input type="submit" />
+}
+<script>
+    function changed() {
+        $("#searchForm").submit();
+    }
+</script>
+
+@foreach (var movie in Model)
+{
+    <div>
+        @Ajax.ActionLink(@movie.Title, "MovieById", "Movies", new { id = movie.Id },
+        new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "movie-content"
+        })
+    </div>
+        <br />
+}
+
+<div id="movie-content"></div>
+

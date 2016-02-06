@@ -1,0 +1,85 @@
+﻿@model MoviesSystem.ViewModels.MovieFullInfoViewModel
+@{
+       ViewBag.Title = "Movie Details";
+}
+
+<h2>@ViewBag.Title</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>
+            Title
+        </td>
+        <td>
+            @Model.Title
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Director
+        </td>
+        <td>
+            @Model.Director
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Year
+        </td>
+        <td>
+            @Model.Year
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Leading Male Role
+        </td>
+        <td>
+            @Model.LeadingMaleRole
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Leading Male Role Age
+        </td>
+        <td>
+            @Model.LeadingMaleRoleAge
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Leading Female Role
+        </td>
+        <td>
+            @Model.LeadingFemaleRole
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Leading Female Role Age
+        </td>
+        <td>
+            @Model.LeadingFemaleRoleAge
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Studio
+        </td>
+        <td>
+            @Model.Studio
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Studio Address
+        </td>
+        <td>
+            @Model.StudioAddress
+        </td>
+    </tr>
+</table> 
+@Html.ActionLink("Edit Movie", "EditMovie", new { id = @Model.Id }, new { @class="btn btn-primary"})
+@Html.ActionLink("Delete Movie", "DeleteMovie", new { id = @Model.Id }, new { @class = "btn btn-danger" })
+
+
+
