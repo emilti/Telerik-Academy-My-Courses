@@ -14,14 +14,9 @@
                                 HttpMethod = "POST"
                             }, new { id = "searchForm" }))
 {
-    <input type="text" name="query" oninput="changed()" />
+    <input type="text" name="query" />
     <input type="submit" />
 }
-<script>
-    function changed() {
-        $("#searchForm").submit();
-    }
-</script>
 
 @foreach (var movie in Model)
 {

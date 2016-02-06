@@ -21,15 +21,16 @@ namespace MoviesSystem.Controllers
         public ActionResult Index(string query)
         {
             List<MovieViewModel> result = new List<MovieViewModel>();
-            if(query != string.Empty)
-            {
-                result = dbContext.Movies
-               .Where(movie => movie.Title.ToLower().Contains(query.ToLower()))
-               .Select(MovieViewModel.FromMovie)
-               .ToList();
-            }else
+            if(query == string.Empty || query == null)
             {
                 result = dbContext.Movies.Select(MovieViewModel.FromMovie).ToList();
+            }
+            else
+            {
+                result = dbContext.Movies
+              .Where(movie => movie.Title.ToLower().Contains(query.ToLower()))
+              .Select(MovieViewModel.FromMovie)
+              .ToList();                
             }
 
 
