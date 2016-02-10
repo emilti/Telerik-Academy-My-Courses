@@ -1,0 +1,22 @@
+﻿@model List<TwitterSystem.Api.Models.Messages.MessageViewModel>
+<br />
+<div>
+@using (Html.BeginForm("SearchTag", "Messages"))
+{
+    <input type="text" name="query" />
+    <input type="submit" />
+}
+
+</div>
+
+@foreach (var message in Model)
+{
+    <div>
+        @message.Title
+    </div>
+    <div>
+        @message.Content
+    </div>
+    <br />
+}
+

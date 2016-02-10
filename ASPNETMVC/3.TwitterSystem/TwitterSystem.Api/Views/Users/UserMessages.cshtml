@@ -1,0 +1,15 @@
+﻿@model List<TwitterSystem.Api.Models.Messages.MessageViewModel>
+
+@foreach (var message in Model)
+{
+    <div>
+        @message.Title
+        <br />
+        @message.Content
+        <br />
+       
+        
+    </div>
+    <br />
+}
+

@@ -1,0 +1,19 @@
+﻿@model List<TwitterSystem.Api.Models.Account.AccountNameViewModel>
+
+<h2>Search for users</h2>
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <input type="text" name="query" />
+    <input type="submit" />
+}
+
+
+@foreach (var user in Model)
+{
+    <div>
+        @Html.ActionLink(@user.UserName, "UserMessages", "Users", new { id = @user.Id }, new {content = "a" })
+    </div>
+    <br />
+}
+

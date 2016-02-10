@@ -1,0 +1,14 @@
+﻿@model TwitterSystem.Api.Models.Messages.RequestWriteMessageModel
+    <h3>Write New Message</h3>
+@using (@Html.BeginForm("WriteMessage", "Messages", FormMethod.Post))
+{   
+    <br />
+    <input type="text" name="title" />
+    <br />
+    <input type="text" name="content" />    
+    <input type="submit" class="btn btn-success" />
+    <div>
+        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+    </div> 
+}
