@@ -21,7 +21,8 @@
             this.Cache = cacheService;
         }
 
-        // GET: Messages/WriteMessage
+        [HttpGet]
+        [Authorize(Roles = "Regular,Admin")]
         public ActionResult WriteMessage()
         {
             return View();
@@ -62,7 +63,7 @@
         public ActionResult GetAllMessages()
         {
             var messages = this.messages.All().ToList();
-            var receivedMessagesForAdminToView = AutoMapperConfig.Configuration.CreateMapper().Map<List<MessagesForAdminViewModel>>(messages);
+            var receivedMessagesForAdminToView = AutoMapperConfig.Configuration.CreateMapper().Map<List<MessagesForAdminViewModel>>(messages);            
             return View(receivedMessagesForAdminToView);
         }
     }

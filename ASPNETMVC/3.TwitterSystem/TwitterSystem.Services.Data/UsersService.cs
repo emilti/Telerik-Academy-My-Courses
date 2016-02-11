@@ -42,6 +42,12 @@ namespace TwitterSystem.Services.Data
         public AppUser GetUserDetails(string id)
         {
             return this.users.GetById(id);               
-        }        
+        }
+
+        public string GetUserName(string id)
+        {
+            var user = this.users.GetById(id);
+            return user.UserName;
+        }
     }
 }
