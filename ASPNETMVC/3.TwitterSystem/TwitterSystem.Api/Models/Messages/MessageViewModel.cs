@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Services.Description;
+﻿
+
 using AutoMapper;
 using TwitterSystem.Api.Infrastructure.Mapping;
+using TwitterSystem.Models;
 
 namespace TwitterSystem.Api.Models.Messages
 {
     public class MessageViewModel: IMapFrom<Message>, IHaveCustomMappings
     {     
+        public int Id { get; set; }
 
         public string Title { get; set; }
 
-        public string Content { get; set; }   
-
-        public void CreateMappings(IConfiguration config)
+        public string Content { get; set; }  
+        
+        public void CreateMappings(IMapperConfiguration configuration)
         {
-            Mapper.CreateMap<Message, MessageViewModel>();                
+            configuration.CreateMap<Message, MessageViewModel>();              
         }
     }
 }

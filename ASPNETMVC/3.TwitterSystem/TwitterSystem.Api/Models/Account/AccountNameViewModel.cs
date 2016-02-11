@@ -11,9 +11,9 @@
 
         public string UserName { get; set; }
 
-        public void CreateMappings(IConfiguration config)
+        public void CreateMappings(IMapperConfiguration configuration)
         {
-            Mapper.CreateMap<AppUser, AccountNameViewModel>();
-        }
+            configuration.CreateMap<AppUser, AccountNameViewModel>();
+        }       
     }
 }

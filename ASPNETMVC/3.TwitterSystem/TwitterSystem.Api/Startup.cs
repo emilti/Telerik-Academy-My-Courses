@@ -10,8 +10,7 @@ namespace TwitterSystem.Api
     {
         public void Configuration(IAppBuilder app)
         {
-            DatabaseConfig.Initialize();
-            AutoMapperConfig.RegisterMappings(Assembly.Load("TwitterSystem.Api"));
+            DatabaseConfig.Initialize();           
             ConfigureAuth(app);
         }
     }

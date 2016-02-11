@@ -7,6 +7,7 @@
     using Models.Messages;
     using AutoMapper.QueryableExtensions;
     using System.Linq;
+    using App_Start;
 
     public class UsersController : Controller
     {
@@ -21,22 +22,11 @@
 
         public ActionResult UserMessages(string Id)
         {
-            List<MessageViewModel> messagesForUser = new List<MessageViewModel>();
+            List<MessageViewModel> receivedMessagesForUserToView = new List<MessageViewModel>();
             AppUser foundUser = this.users.GetUserDetails(Id);
-            var receivedMessagesForUser = this.messages.GetMessagesForUser(foundUser.UserName);
-            // .ProjectTo<MessageViewModel>();
-            foreach (var item in receivedMessagesForUser)
-            {
-                MessageViewModel newMessage = new MessageViewModel
-                {
-                    Title = item.Title,
-                    Content = item.Content
-                };
-
-                messagesForUser.Add(newMessage);
-            }
-            messagesForUser = messagesForUser.ToList();
-            return View(messagesForUser);
+            var receivedMessagesForUser = this.messages.GetMessagesForUser(foundUser.UserName);            
+            receivedMessagesForUserToView = AutoMapperConfig.Configuration.CreateMapper().Map<List<MessageViewModel>>(receivedMessagesForUser);          
+            return View(receivedMessagesForUserToView);
         }
     }
 }

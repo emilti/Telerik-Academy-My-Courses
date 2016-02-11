@@ -7,6 +7,7 @@
     using Microsoft.AspNet.Identity;
     using System;
     using System.Collections.Generic;
+    using App_Start;
 
     public class MessagesController : Controller
     {
@@ -27,23 +28,14 @@
 
         public ActionResult SearchTag(string query)
         {
-            List<MessageViewModel> foundMessages = new List<MessageViewModel>();
+            List<MessageViewModel> receivedMessagesWithTagToView = new List<MessageViewModel>();
             if (query != string.Empty || query != null)
             {
                 var receivedMessagesWithTag = this.messages.GetMessagesWithTag(query);
-                foreach (var item in receivedMessagesWithTag)
-                {
-                    MessageViewModel newMessage = new MessageViewModel
-                    {
-                        Title = item.Title,
-                        Content = item.Content
-                    };
-
-                    foundMessages.Add(newMessage);
-                }
+                receivedMessagesWithTagToView = AutoMapperConfig.Configuration.CreateMapper().Map<List<MessageViewModel>>(receivedMessagesWithTag);              
             }
 
-            return View(foundMessages);
+            return View(receivedMessagesWithTagToView);
         }
 
         [HttpPost]
