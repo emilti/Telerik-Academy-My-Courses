@@ -72,6 +72,7 @@ namespace TwitterSystem.Api.App_Start
             kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
             kernel.Bind<IUsersService>().To<UsersService>();
             kernel.Bind<IMessagesService>().To<MessagessService>();
+            kernel.Bind<ICacheService>().To<HttpCacheService>();           
         }        
     }
 }

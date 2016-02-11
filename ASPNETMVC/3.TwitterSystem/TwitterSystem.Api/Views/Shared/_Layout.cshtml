@@ -30,7 +30,7 @@
 
                     @if(User.IsInRole("Admin"))
                     {
-                        <li>@Html.ActionLink("Twits", "GetAllTwitts")</li>
+                        <li>@Html.ActionLink("Messages", "GetAllMessages", "Messages")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

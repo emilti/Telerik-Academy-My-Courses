@@ -24,7 +24,7 @@ namespace TwitterSystem.Api.Controllers
         {
             List<AppUser> foundUsers = new List<AppUser>();
             List<AccountNameViewModel> foundUsersToView = new List<AccountNameViewModel>();
-            if (query != string.Empty || query != null)
+            if (query != string.Empty && query != null)
             {             
                 foundUsers = this.users.AllSearchedUsers(query).ToList();
                 foundUsersToView = AutoMapperConfig.Configuration.CreateMapper().Map<List<AccountNameViewModel>>(foundUsers);

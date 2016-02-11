@@ -207,6 +207,7 @@
     <Compile Include="Models\Account\AccountNameViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Messages\MessagesForAdminViewModel.cs" />
     <Compile Include="Models\Messages\MessageViewModel.cs" />
     <Compile Include="Models\Messages\RequestWriteMessageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -268,6 +269,7 @@
     <Content Include="Views\Users\UserMessages.cshtml" />
     <Content Include="Views\Messages\WriteMessage.cshtml" />
     <Content Include="Views\Messages\SearchTag.cshtml" />
+    <Content Include="Views\Messages\GetAllMessages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
